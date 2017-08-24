@@ -1,0 +1,23 @@
+{
+  "auth.button.signIn.title": "Entrar",
+  "auth.button.signUp.title": "Registrarse",
+  "auth.button.forgotPassword.title": "Olvide mi contraseña",
+  "auth.signIn.title": "Entrar",
+  "auth.signUp.title": "Registrarse",
+  "auth.forgotPassword.title": "Olvide mi contraseña",
+  "auth.switch.titleSpanish": "Español",
+  "auth.switch.titleEnglish": "Ingles",
+  "auth.error.emailError": "El correo no existe",
+  "auth.error.passwordError": "La contraseña es incorrecta",
+  "auth.error.emailExist": "El correo ya existe",
+  "auth.error.usernameExist": "El nombre de usuario ya existe",
+  "auth.form.username": "Usuario",
+  "auth.form.error.username": "Debe tener entre 6-12 caracteres con/sin numeros",
+  "auth.form.email": "Correo",
+  "auth.form.error.email": "Ingresa un correo valido",
+  "auth.form.password": "Contraseña",
+  "auth.form.error.password": "Debe tener entre 6-12 caracteres con al menos 1 número y 1 caracter especial",
+  "auth.form.passwordAgain": "Confirmar contraseña",
+  "auth.form.error.passwordAgain": "Las contraseñas deben coincidir",
+  "auth.form.showPasswords": "Mostrar contraseñas"
+}

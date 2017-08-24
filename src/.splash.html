@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      *, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #008fff;
+}
+
+svg{
+  width: 100%;
+}
+
+.gooey-loader {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: url(#goo);
+          filter: url(#goo);
+  width: 120px;
+  height: 120px;
+}
+.gooey-loader__dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: translate(-50%, -80px);
+          transform: translate(-50%, -80px);
+  -webkit-transform-origin: 50% 80px;
+          transform-origin: 50% 80px;
+  border-radius: 50%;
+  -webkit-animation: rotate 2s infinite linear;
+          animation: rotate 2s infinite linear;
+}
+.gooey-loader__dot:nth-child(2n + 1) {
+  -webkit-animation: rotate2 2s infinite linear;
+          animation: rotate2 2s infinite linear;
+}
+.gooey-loader__dot:nth-child(1) {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  background: #76489d;
+}
+.gooey-loader__dot:nth-child(2) {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  background: #5af158;
+}
+.gooey-loader__dot:nth-child(3) {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  background: #ffc107;
+}
+.gooey-loader__dot:nth-child(4) {
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  background: #ff5722;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, -80px) rotate(0deg) scale(0.8, 0.8);
+            transform: translate(-50%, -80px) rotate(0deg) scale(0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -80px) rotate(180deg) scale(0.7, 0.7);
+            transform: translate(-50%, -80px) rotate(180deg) scale(0.7, 0.7);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -80px) rotate(360deg) scale(0.8, 0.8);
+            transform: translate(-50%, -80px) rotate(360deg) scale(0.8, 0.8);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: translate(-50%, -80px) rotate(0deg) scale(0.8, 0.8);
+            transform: translate(-50%, -80px) rotate(0deg) scale(0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -80px) rotate(180deg) scale(0.7, 0.7);
+            transform: translate(-50%, -80px) rotate(180deg) scale(0.7, 0.7);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -80px) rotate(360deg) scale(0.8, 0.8);
+            transform: translate(-50%, -80px) rotate(360deg) scale(0.8, 0.8);
+  }
+}
+@-webkit-keyframes rotate2 {
+  0% {
+    -webkit-transform: translate(-50%, -80px) rotate(0deg) scale(0.7, 0.7);
+            transform: translate(-50%, -80px) rotate(0deg) scale(0.7, 0.7);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -80px) rotate(180deg) scale(0.8, 0.8);
+            transform: translate(-50%, -80px) rotate(180deg) scale(0.8, 0.8);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -80px) rotate(360deg) scale(0.7, 0.7);
+            transform: translate(-50%, -80px) rotate(360deg) scale(0.7, 0.7);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    -webkit-transform: translate(-50%, -80px) rotate(0deg) scale(0.7, 0.7);
+            transform: translate(-50%, -80px) rotate(0deg) scale(0.7, 0.7);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -80px) rotate(180deg) scale(0.8, 0.8);
+            transform: translate(-50%, -80px) rotate(180deg) scale(0.8, 0.8);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -80px) rotate(360deg) scale(0.7, 0.7);
+            transform: translate(-50%, -80px) rotate(360deg) scale(0.7, 0.7);
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" />
+    </filter>
+  </defs>
+</svg>
+
+<div class="gooey-loader">
+  <div class="gooey-loader__dot"></div>
+  <div class="gooey-loader__dot"></div>
+  <div class="gooey-loader__dot"></div>
+  <div class="gooey-loader__dot"></div>
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "auth.button.signIn.title": "Sign in",
+  "auth.button.signUp.title": "Sign up",
+  "auth.button.forgotPassword.title": "Forgot Password",
+  "auth.signIn.title": "Login",
+  "auth.signUp.title": "Sign up",
+  "auth.forgotPassword.title": "Forgot Password",
+  "auth.switch.titleSpanish": "Spanish",
+  "auth.switch.titleEnglish": "English",
+  "auth.error.emailError": "Mail does not exist",
+  "auth.error.passwordError": "Password is incorrect",
+  "auth.error.emailExist": "Mail already exists",
+  "auth.error.usernameExist": "Username already exists",
+  "auth.form.username": "Username",
+  "auth.form.error.username": "Must be between 6-12 in length with letters or numbers",
+  "auth.form.email": "Email",
+  "auth.form.error.email": "Provide valid email",
+  "auth.form.password": "Password",
+  "auth.form.error.password": "Must be between 6-12 characters with at least 1 number and 1 special character",
+  "auth.form.passwordAgain": "Confirm password",
+  "auth.form.error.passwordAgain": "Passwords must match",
+  "auth.form.showPasswords": "Show passwords"
+}

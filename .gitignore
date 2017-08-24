@@ -1,0 +1,14 @@
+src/.meteor/local
+src/.meteor/meteorite
+src/node_modules/*
+src/.app/*
+src/.cache/*
+src/.dist
+src/.DS_Store
+src/.idea/
+src/*.iml
+src/.bundle/*
+src/npm-debug.log
+src/.tmp
+src/package.json
+

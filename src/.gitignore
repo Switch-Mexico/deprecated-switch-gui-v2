@@ -1,0 +1,12 @@
+.meteor/local
+.meteor/meteorite
+node_modules/*
+.app/*
+.cache/*
+.dist
+.DS_Store
+.idea/
+*.iml
+.bundle/*
+npm-debug.log
+.tmp
