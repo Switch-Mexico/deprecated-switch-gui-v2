@@ -1,0 +1,196 @@
+
+
+/*
+Author: XpeedStudio
+Author URI: http://themeforest.net/user/XpeedStudio/portfolio
+*/
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        font-size: 15px;
+    }
+	h2 {
+		font-size: 50px;
+	}
+    .carousel-caption p{
+		font-size:38px;
+		line-height: 35px;
+	}
+
+}
+
+/* Portrait tablets and small desktops */
+@media  (min-width:769px) and (max-width: 991px) {
+    html {
+        font-size: 90%;
+    }
+	h2 {
+		font-size: 50px;
+	}
+	.carousel-caption p{
+		font-size:31px;
+		line-height: 35px;
+	}
+	.carousel-caption .btn_bg {
+		margin: 110px auto;
+		margin-bottom: 0px;
+	}
+	.carousel-caption .btn_bg a {
+		left: 19%;
+	}
+	.contact .btn_bg a {
+		left: 27%;
+	}
+	.contact_socail_bookmark_area .head_title h2{
+		font-size:38px;
+		line-height:4rem;
+	}
+	.contact_message {
+		margin-top: 50px;
+	}
+	.contact_socail_bookmark {
+		margin-top: 50px;
+	}
+	.contact_adress {
+		margin-top: 35px;
+		margin-bottom: 25px;
+	}
+	.btn_bg a {
+		left: 35%;
+	}
+	
+	.contact_socail_bookmark_area span {
+		font-size: 14px;
+	}
+	
+	.single_copyirgth ul li a {
+		padding: 5px;
+		font-size: 10px;
+	}
+    
+    
+   
+
+
+}
+/* Landscape phones and portrait tablets */
+@media (min-width:480px) and (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+	.carousel-caption p {
+		font-size: 27px;
+		line-height: 32px;
+	}
+	.carousel-caption .btn_bg {
+		margin: 80px auto;
+		width: 55%;
+	}
+	.carousel-caption .btn_bg a {
+		left: 15%;
+	}
+	.contact .btn_bg a {
+		left: 38%;
+	}
+	
+	.btn_bg a {
+		left: 32%;
+	}
+    
+   
+   
+}
+
+
+
+/* Landscape phones and smaller */
+@media (min-width:320px) and (max-width: 479px) {
+    html {
+        font-size: 65%;
+    }
+	.carousel-caption {
+		top: 10px;
+		left: 50px;
+	}
+	.carousel-caption p {
+		font-size: 20px;
+		line-height: 25px;
+	}
+	.carousel-caption .btn_bg {
+		background: none;
+		width: 100%;
+		margin: 60px auto;
+	}
+	.carousel-caption .btn_bg a {
+		text-align:center;
+	}
+	h2 {
+		font-size: 40px;
+		line-height: 5rem;
+	}
+	.contact_message {
+		margin-top: 0px;
+	}
+	.head_title_rigth p {
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.single_whatido p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.single_about p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.contact .btn_bg a {
+		left: 30%;
+	}
+	
+	.contact_socail_bookmark_area{
+		margin-top:40px;
+	}
+	.btn_bg a {
+		left: 32%;
+	}
+	
+	.btn_bg {
+		width: 100%;
+	}
+	.single_copyirgth p{
+		padding:5px;
+	}
+	
+	.single_copyirgth ul li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+
+}
+
+
+
+@media (max-width: 320px) {
+
+
+    html {
+        font-size: 60.5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
