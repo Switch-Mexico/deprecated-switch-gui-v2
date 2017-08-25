@@ -1,6 +1,7 @@
 import Users from '../../collections/users';
 import PowerPlants from '../../collections/powerPlants';
 import Emissions from '../../collections/emissions';
+import TransmissionLines from '../../collections/transmissionLines';
 import fs from 'fs';
 import d3 from 'd3';
 
@@ -53,8 +54,22 @@ export default function uploadFile(root, { file }) {
       PowerPlants.insert({ name: filename, rows: rows, columns: columns });
       break;
     }
-    case 'scenarios.csv':
+    case 'BuildTrans.tab': {
+      let filename = file.name;
+      filename = filename.slice(0, -4);
+      console.log(TransmissionLines);
+      TransmissionLines.remove({});
+      data = d3.tsvParse(data);
+      let rows = [];
+      data.forEach((row, i) => {
+        rows.push(row);
+      });
+      let columns = data.columns;
+
+      TransmissionLines.insert({ name: filename, rows: rows, columns: columns });
+
       break;
+    }
 
     case 'load_zones.tab':
       break;

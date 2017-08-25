@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import MainMenu from '/imports/ui/components/Navigation/Menu';
 
 import Inputs from '/imports/ui/containers/Dashboard/Inputs/capacityContainer';
+
+import Outputs from '/imports/ui/containers/Dashboard/Outputs/transmissionContainer';
 import Information from '/imports/ui/containers/Dashboard/Information/Emissions/emissionsContainer';
 
 const Home = props =>
@@ -18,7 +20,7 @@ const Home = props =>
         <Route exact path="/" component={Information} />
         <Route exact path="/information" component={Information} />
         <Route exact path="/inputs" component={Inputs} />
-        <Route exact path="/outputs" component={Inputs} />
+        <Route exact path="/outputs" component={Outputs} />
       </Switch>
     </main>
   </div>;
