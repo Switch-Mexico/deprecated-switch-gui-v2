@@ -5,6 +5,8 @@ const Query = `
     me: User
     user(_id: ID!): User
     files: [JSON]
+    getPowerPlants: [JSON]
+    getTransmissionLines: [JSON]
   }
 `;
 export default () => [Query, User];

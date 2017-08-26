@@ -15,15 +15,15 @@ import { drawPoints, setLegend, setInfo, showMap, getYears, showNewPoints } from
 const Container = compose(
   graphql(gql`
     query fileQuery {
-      files
+      getTransmissionLines
     }
   `),
-  withState('blueLines', 'setBlueLines', 0),
-  withState('country', 'setCountry', 0),
-  withState('mapInfo', 'setMapInfo', 0),
   withState('map', 'setMap', 0),
   withState('datas', 'setDatas', 0),
   withState('period', 'setPeriod', 0),
+  withState('country', 'setCountry', 0),
+  withState('mapInfo', 'setMapInfo', 0),
+  withState('blueLines', 'setBlueLines', 0),
   lifecycle({
     componentWillMount() {
       this.props.data.refetch();
@@ -31,23 +31,14 @@ const Container = compose(
     componentDidMount() {
       let self = this; // save de reference to the component context
       this.props.data.refetch().then(res => {
-        let data = res.data.files; // fetch files collection
-
-        data = data.filter(obj => {
-          if (obj[0]) {
-            let ob = obj[0];
-            return ob.name == 'BuildTrans';
-          }
-        })[0];
-
-        data = data[0];
-        // End of FIXME
+        let data = res.data.getTransmissionLines[0]; // fixed
+        console.log(data);
         data = data.rows;
         let period = getYears(data);
         self.props.setPeriod(period);
         self.props.setDatas(data);
 
-        let map = L.map(this.refs.national_map, { zoomControl: false });
+        let map = L.map(this.refs.national_map, { zoomControl: false, minZoom: 4 });
         map.setView([23.8, -102.1], 5);
 
         map.createPane('labels');

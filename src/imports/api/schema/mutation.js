@@ -27,8 +27,12 @@ type Mutation {
   updateEmail(email: String!, userId: ID): User
   updateUserProfile(profile: UserProfileInput, userId: ID): User  
 
+  
+  
   # Files
   uploadFile(file : FileInput): JSON
+  uploadPowerPlants(file : FileInput): JSON
+  uploadTransmissionLines(file : FileInput): JSON
 
 }
 `;

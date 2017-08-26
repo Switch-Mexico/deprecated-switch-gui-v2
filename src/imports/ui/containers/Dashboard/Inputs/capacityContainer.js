@@ -16,13 +16,13 @@ import { setInfo, setLegend, setGeoJSON } from '../../../data/mapHelpers';
 const QueryContainer = compose(
   graphql(gql`
     query fileQuery {
-      files
+      getPowerPlants
     }
   `),
   withState('map', 'setMap', 0),
-  withState('global', 'setGlobal', []),
   withState('country', 'setCountry', 0),
   withState('mapInfo', 'setMapInfo', 0),
+  withState('global', 'setGlobal', []),
   withState('loadZone', 'setLoadZone', []),
   withState('color', 'setColor', '#343434'),
   withState('balancingArea', 'setBalancingArea', []),
@@ -33,7 +33,7 @@ const QueryContainer = compose(
     componentDidMount() {
       let self = this; // save de reference to the component context
       this.props.data.refetch().then(res => {
-        let map = L.map(this.refs.national_map, { zoomControl: false });
+        let map = L.map(this.refs.national_map, { zoomControl: false, minZoom: 4 });
         map.setView([23.8, -102.1], 5);
         map.createPane('shapes');
         map.getPane('shapes').style.zIndex = 900;
@@ -46,21 +46,12 @@ const QueryContainer = compose(
           attribution: '©OpenStreetMap, ©CartoDB',
           pane: 'labels',
         }).addTo(map);
-        let data = res.data.files; // fetch files collection
 
-        // FIXME this approach is temporal
-        data = data.filter(obj => {
-          if (obj[0]) {
-            let ob = obj[0];
-            return ob.name == 'PowerPlants';
-          }
-        })[0];
-        data = data[0];
-        // End of FIXME
+        let data = res.data.getPowerPlants[0]; // fixed
 
         let arrayData = [];
         let country = nationalData(data);
-        // sacar esto, desde aqui
+
         Object.entries(country.balancingAreas).forEach(([key, value]) => {
           let capacities = value.properties.capacity.break_down;
           capacities.map(a => {

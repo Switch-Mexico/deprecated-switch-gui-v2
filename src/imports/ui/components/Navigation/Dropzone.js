@@ -5,8 +5,8 @@ import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
 let query = gql`
-  {
-    files
+  query fileQuery {
+    getPowerPlants
   }
 `;
 
@@ -46,7 +46,16 @@ var djsConfig = {
 const Dropzone = props => {
   var eventHandlers = {
     addedfile: file => {
-      props.handleFile(file);
+      console.log(file, 'file');
+      switch (file.name) {
+        case 'PowerPlants.csv': {
+          props.handlePowerPlants(file);
+          break;
+        }
+
+        default:
+          break;
+      }
     },
   };
   return (
@@ -64,12 +73,12 @@ const DropzoneContainer = compose(
   graphql(
     gql`
       mutation($file: FileInput) {
-        uploadFile(file: $file)
+        uploadPowerPlants(file: $file)
       }
     `,
     {
       options: {
-        update: (proxy, { data: { uploadFile } }) => {
+        update: (proxy, { data: { uploadPowerPlants } }) => {
           const data = proxy.readQuery({ query });
           // data.files.push(uploadFile);          FIXME
           // proxy.writeQuery({ query, data });
@@ -78,6 +87,20 @@ const DropzoneContainer = compose(
     }
   ),
   withHandlers({
+    handlePowerPlants: ({ mutate }) => file => {
+      mutate({
+        variables: { file },
+        refetchQueries: [
+          {
+            query: gql`
+              query fileQuery {
+                getPowerPlants
+              }
+            `,
+          },
+        ],
+      });
+    },
     handleFile: ({ mutate }) => file => {
       mutate({
         variables: { file },

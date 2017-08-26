@@ -1,5 +1,4 @@
 import Users from '../../collections/users';
-import PowerPlants from '../../collections/powerPlants';
 import Emissions from '../../collections/emissions';
 import TransmissionLines from '../../collections/transmissionLines';
 import fs from 'fs';
@@ -41,9 +40,7 @@ export default function uploadFile(root, { file }) {
     case 'PowerPlants.csv': {
       let filename = file.name;
       filename = filename.slice(0, -4);
-      console.log(PowerPlants);
 
-      PowerPlants.remove({});
       data = d3.csvParse(data);
       let rows = [];
       data.forEach((row, i) => {
@@ -51,7 +48,6 @@ export default function uploadFile(root, { file }) {
       });
       let columns = data.columns;
 
-      PowerPlants.insert({ name: filename, rows: rows, columns: columns });
       break;
     }
     case 'BuildTrans.tab': {
@@ -80,5 +76,5 @@ export default function uploadFile(root, { file }) {
     default:
       console.log('lol');
   }
-  return PowerPlants.findOne();
+  return TransmissionLines.findOne();
 }
