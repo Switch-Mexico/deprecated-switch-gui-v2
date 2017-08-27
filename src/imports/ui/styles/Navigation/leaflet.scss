@@ -44,6 +44,8 @@
   }
 }
 
+
+
 /* hack that prevents hw layers "stretching" when loading new tiles */
 
 .leaflet-marker-icon, .leaflet-marker-shadow {
@@ -437,7 +439,7 @@
 }
 
 .leaflet-control-layers-toggle {
-  background-image: url(images/layers.png);
+  background: #000;
   width: 36px;
   height: 36px;
 }

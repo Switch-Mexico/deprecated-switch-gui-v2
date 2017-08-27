@@ -16,7 +16,7 @@ const Emissions = props => {
             width: `${690}px`,
           }}
         >
-          <CardHeader>Chart showing somenthing</CardHeader>
+          <CardHeader>Chart showing something</CardHeader>
           <BarChart />
         </Card>
       </Col>

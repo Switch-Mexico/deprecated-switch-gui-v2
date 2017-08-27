@@ -5,7 +5,7 @@ import BarChart from '/imports/ui/components/Dashboard/Charts/BarChart';
 const Capacity = props =>
   <Row>
     <Col xs="8" sm="8" lg="8">
-      <Card style={{ marginTop: `${60}px`, marginLeft: `${15}px`, width: `${750}px` }}>
+      <Card style={{ marginTop: `${30}px`, marginLeft: `${15}px`, width: `${750}px` }}>
         <CardHeader>Current Scenario of the Mexico's Installed Capacity </CardHeader>
         <CardBlock className="card-body">
           <div
@@ -20,7 +20,8 @@ const Capacity = props =>
       <Row>
         <Card
           style={{
-            marginTop: `${60}px`,
+            marginTop: `${30}px`,
+            marginRight: `${15}px`,
             height: `${252}px`,
             width: `${400}px`,
           }}
@@ -33,6 +34,7 @@ const Capacity = props =>
         <Card
           style={{
             marginTop: `${10}px`,
+            marginRight: `${15}px`,
             width: `${400}px`,
             height: `${220}px`,
           }}
@@ -45,6 +47,7 @@ const Capacity = props =>
         <Card
           style={{
             marginTop: `${10}px`,
+            marginRight: `${15}px`,
             height: `${220}px`,
             width: `${400}px`,
           }}

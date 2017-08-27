@@ -7,7 +7,7 @@ import '/imports/ui/styles/Navigation/app.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 import MainMenu from '/imports/ui/components/Navigation/Menu';
 
-import Inputs from '/imports/ui/containers/Dashboard/Inputs/capacityContainer';
+import Inputs from '/imports/ui/components/Dashboard/Inputs/inputs';
 
 import Outputs from '/imports/ui/containers/Dashboard/Outputs/transmissionContainer';
 import Information from '/imports/ui/containers/Dashboard/Information/Emissions/emissionsContainer';
