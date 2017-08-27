@@ -7,7 +7,7 @@ import '/imports/ui/styles/Navigation/app.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 import MainMenu from '/imports/ui/components/Navigation/Menu';
 
-import Inputs from '/imports/ui/components/Dashboard/Inputs/inputs';
+import Inputs from '/imports/ui/components/Dashboard/Inputs';
 
 import Outputs from '/imports/ui/containers/Dashboard/Outputs/transmissionContainer';
 import Information from '/imports/ui/containers/Dashboard/Information/Emissions/emissionsContainer';
@@ -19,7 +19,7 @@ const Home = props =>
       <Switch>
         <Route exact path="/" component={Information} />
         <Route exact path="/information" component={Information} />
-        <Route exact path="/inputs" component={Inputs} />
+        <Route path="/inputs" component={Inputs} />
         <Route exact path="/outputs" component={Outputs} />
       </Switch>
     </main>

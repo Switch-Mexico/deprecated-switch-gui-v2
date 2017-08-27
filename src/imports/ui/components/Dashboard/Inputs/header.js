@@ -47,10 +47,10 @@ export default class Example extends React.Component {
             </DropdownMenu>
           </NavDropdown>
           <NavItem>
-            <NavLink href="/inputs/capacity">Capacity</NavLink>
+            <NavLink href="/inputs">Capacity</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Load Zones</NavLink>
+            <NavLink href="/inputs/capacity">Load Zones</NavLink>
           </NavItem>
           <NavItem>
             <NavLink disabled href="#">

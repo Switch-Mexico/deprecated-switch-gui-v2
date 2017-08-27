@@ -5,7 +5,7 @@ import BarChart from '/imports/ui/components/Dashboard/Charts/BarChart';
 const Capacity = props =>
   <Row>
     <Col xs="8" sm="8" lg="8">
-      <Card style={{ marginTop: `${30}px`, marginLeft: `${15}px`, width: `${750}px` }}>
+      <Card style={{ marginTop: `${30}px`, width: `${750}px` }}>
         <CardHeader>Current Scenario of the Mexico's Installed Capacity </CardHeader>
         <CardBlock className="card-body">
           <div

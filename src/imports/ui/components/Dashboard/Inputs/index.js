@@ -1,15 +1,10 @@
-import { Switch, Route } from 'react-router-dom';
+import Header from './header';
+import Body from './inputs';
 
-import Capacity from '/imports/ui/containers/Dashboard/Inputs/capacityContainer';
-
-const Dashboard = props =>
-  <div id="outer-container">
-    <main id="page-wrap">
-      <Switch>
-        <Route exact path="/capacity" component={Capacity} />
-        <Route exact path="/loadzones" component={LoadZones} />
-      </Switch>
-    </main>
+const Inputs = () =>
+  <div>
+    <Header />
+    <Body />
   </div>;
 
-export default Dashboard;
+export default Inputs;
