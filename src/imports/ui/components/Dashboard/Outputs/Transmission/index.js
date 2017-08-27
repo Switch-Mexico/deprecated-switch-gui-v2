@@ -5,6 +5,7 @@ import { showNewPoints } from '../../../../containers/Dashboard/Outputs/mapHelpe
 
 const Capacity = props => {
   if (props.blueLines != 0) {
+    console.log(props, props.country, props.map, props.datas, props.period, props.blueLines);
     showNewPoints(props, props.country, props.map, props.datas, props.period, props.blueLines);
   }
   return (
@@ -14,7 +15,7 @@ const Capacity = props => {
           <CardHeader>Mexico's Transmission Lines </CardHeader>
           <CardBlock className="card-body">
             <div
-              ref="national_map"
+              ref="transmission_map"
               className="chart-wrapper"
               style={{ height: `${620}px`, width: `${100}%` }}
             />
@@ -30,7 +31,7 @@ const Capacity = props => {
               width: `${400}px`,
             }}
           >
-            <CardHeader>Country's Installed Capacity [MW]</CardHeader>
+            <CardHeader />
           </Card>
         </Row>
         <Row>
@@ -41,7 +42,7 @@ const Capacity = props => {
               height: `${220}px`,
             }}
           >
-            <CardHeader> Installed Capacity per Balancing Area [MW]</CardHeader>
+            <CardHeader> </CardHeader>
           </Card>
         </Row>
         <Row>
@@ -52,7 +53,7 @@ const Capacity = props => {
               width: `${400}px`,
             }}
           >
-            <CardHeader>Installed Capacity per Load Zone [MW]</CardHeader>
+            <CardHeader />
           </Card>
         </Row>
       </Col>

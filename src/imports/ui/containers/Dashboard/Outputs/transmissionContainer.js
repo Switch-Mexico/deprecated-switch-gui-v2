@@ -9,7 +9,7 @@ import 'leaflet/dist/leaflet.css';
 
 import Transmission from '../../../components/Dashboard/Outputs/Transmission';
 import coordinates from '../../../data/Points/coordinates';
-import country from '../../../data';
+import country from './data';
 import { drawPoints, setLegend, setInfo, showMap, getYears, showNewPoints } from './mapHelpers';
 
 const Container = compose(
@@ -38,7 +38,7 @@ const Container = compose(
         self.props.setPeriod(period);
         self.props.setDatas(data);
 
-        let map = L.map(this.refs.national_map, { zoomControl: false, minZoom: 4 });
+        let map = L.map(this.refs.transmission_map, { zoomControl: false, minZoom: 4 });
         map.setView([23.8, -102.1], 5);
 
         map.createPane('labels');
