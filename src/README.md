@@ -4,7 +4,7 @@
 - Meteor (https://www.meteor.com/install)
 - Yarn (https://yarnpkg.com/en/docs/install)
 
-## install app and run in dev mode
+## Install app and run in dev mode
 
 Install dependencies:
 ``` bash
