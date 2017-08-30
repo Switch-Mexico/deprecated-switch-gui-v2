@@ -2,7 +2,15 @@ import Header from './header';
 import Body from './inputs';
 
 const Inputs = () =>
-  <div>
+  <div
+    style={{
+      width: `${100}%`,
+      height: `${100}%`,
+      marginLeft: `${15}px`,
+      marginRight: `${15}px`,
+      paddingBottom: `${25}px`,
+    }}
+  >
     <Header />
     <Body />
   </div>;

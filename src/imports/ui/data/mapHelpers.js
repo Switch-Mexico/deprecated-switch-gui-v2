@@ -99,7 +99,7 @@ export function setInfo(props) {
 
   // method that we will use to update the control operating over the feature properties received
   info.update = function(props) {
-    this._div.innerHTML = `<h4>Mexico's Balancing Areas</h4>${props // ternary operator to decide wheter there are function's arguments or not
+    this._div.innerHTML = `${props // ternary operator to decide wheter there are function's arguments or not
       ? `${'Balancing Area:     ' + '<b>'}${props.b_a.name}</b>` +
         `<br>` + // if arguments
         `Installed Capacity: ` +

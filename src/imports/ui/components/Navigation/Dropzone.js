@@ -4,12 +4,6 @@ import { compose, withHandlers } from 'recompose';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
-let query = gql`
-  query fileQuery {
-    getPowerPlants
-  }
-`;
-
 let componentConfig = {
   iconFiletypes: ['.csv', '.tab', '.xlsx'],
   showFiletypeIcon: true,
@@ -52,6 +46,14 @@ const Dropzone = props => {
           props.handlePowerPlants(file);
           break;
         }
+        case 'load_zones.csv': {
+          props.handleLoadZones(file);
+          break;
+        }
+        case 'BuildTrans.tab': {
+          props.handleTransmissionLines(file);
+          break;
+        }
 
         default:
           break;
@@ -72,14 +74,67 @@ const Dropzone = props => {
 const DropzoneContainer = compose(
   graphql(
     gql`
-      mutation($file: FileInput) {
+      mutation uploadTL($file: FileInput) {
+        uploadTransmissionLines(file: $file)
+      }
+    `,
+    {
+      name: 'uploadTL',
+      options: {
+        update: (proxy, { data: { uploadTransmissionLines } }) => {
+          // const data = proxy.readQuery({ query });
+          // console.log(data, uploadTransmissionLines);
+          // data.files.push(uploadFile);          FIXME
+          // proxy.writeQuery({ query, data });
+        },
+      },
+    }
+  ),
+  graphql(
+    gql`
+      mutation uploadPP($file: FileInput) {
         uploadPowerPlants(file: $file)
       }
     `,
     {
+      name: 'uploadPP',
       options: {
         update: (proxy, { data: { uploadPowerPlants } }) => {
-          const data = proxy.readQuery({ query });
+          console.log(proxy, 'proxy 1');
+          const data = proxy.readQuery({
+            query: gql`
+              query getPP {
+                getPowerPlants
+              }
+            `,
+          });
+          console.log(data, uploadPowerPlants);
+          // data.getPowerPlants.push(uploadPowerPlants);
+          console.log(proxy, 'proxy');
+          proxy.writeQuery({
+            query: gql`
+              query getPP {
+                getPowerPlants
+              }
+            `,
+            data,
+          });
+        },
+      },
+    }
+  ),
+  graphql(
+    gql`
+      mutation uploadLZ($file: FileInput) {
+        uploadLoadZones(file: $file)
+      }
+    `,
+    {
+      name: 'uploadLZ',
+      options: {
+        update: (proxy, { data: { uploadLoadZones } }) => {
+          // const data = proxy.readQuery({ query });
+          // console.log(data, uploadLoadZones);
           // data.files.push(uploadFile);          FIXME
           // proxy.writeQuery({ query, data });
         },
@@ -87,13 +142,27 @@ const DropzoneContainer = compose(
     }
   ),
   withHandlers({
-    handlePowerPlants: ({ mutate }) => file => {
-      mutate({
+    handleTransmissionLines: ({ uploadTL }) => file => {
+      uploadTL({
         variables: { file },
         refetchQueries: [
           {
             query: gql`
               query fileQuery {
+                getTransmissionLines
+              }
+            `,
+          },
+        ],
+      });
+    },
+    handlePowerPlants: ({ uploadPP }) => file => {
+      uploadPP({
+        variables: { file },
+        refetchQueries: [
+          {
+            query: gql`
+              query getPP {
                 getPowerPlants
               }
             `,
@@ -101,14 +170,14 @@ const DropzoneContainer = compose(
         ],
       });
     },
-    handleFile: ({ mutate }) => file => {
-      mutate({
+    handleLoadZones: ({ uploadLZ }) => file => {
+      uploadLZ({
         variables: { file },
         refetchQueries: [
           {
             query: gql`
               query fileQuery {
-                files
+                getLoadZones
               }
             `,
           },

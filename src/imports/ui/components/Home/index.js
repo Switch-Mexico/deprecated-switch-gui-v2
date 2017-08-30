@@ -4,6 +4,7 @@ import '/imports/ui/styles/App/HomeContainer.scss';
 import '/imports/ui/styles/Navigation/dropzone.scss';
 import '/imports/ui/styles/Navigation/sidebar.scss';
 import '/imports/ui/styles/Navigation/app.scss';
+import '/imports/ui/styles/Navigation/dashboard.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 import MainMenu from '/imports/ui/components/Navigation/Menu';
 

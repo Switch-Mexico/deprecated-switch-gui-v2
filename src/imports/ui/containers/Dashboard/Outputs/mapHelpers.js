@@ -176,7 +176,6 @@ export function showMap(self, mapa) {
 }
 
 export function drawPoints(self, country, mapa) {
-  console.log(country, '-jjjjjjjjjjjjjjjjjjjjjjjjjjjj');
   let coordinatesList = {};
 
   for (let key in country.balancingAreas) {

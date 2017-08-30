@@ -5,7 +5,6 @@ import { showNewPoints } from '../../../../containers/Dashboard/Outputs/mapHelpe
 
 const Capacity = props => {
   if (props.blueLines != 0) {
-    console.log(props, props.country, props.map, props.datas, props.period, props.blueLines);
     showNewPoints(props, props.country, props.map, props.datas, props.period, props.blueLines);
   }
   return (
@@ -41,9 +40,7 @@ const Capacity = props => {
               width: `${400}px`,
               height: `${220}px`,
             }}
-          >
-            <CardHeader> </CardHeader>
-          </Card>
+          />
         </Row>
         <Row>
           <Card

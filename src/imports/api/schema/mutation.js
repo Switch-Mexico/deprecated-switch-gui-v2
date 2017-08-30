@@ -33,6 +33,7 @@ type Mutation {
   uploadFile(file : FileInput): JSON
   uploadPowerPlants(file : FileInput): JSON
   uploadTransmissionLines(file : FileInput): JSON
+  uploadLoadZones(file : FileInput): JSON
 
 }
 `;

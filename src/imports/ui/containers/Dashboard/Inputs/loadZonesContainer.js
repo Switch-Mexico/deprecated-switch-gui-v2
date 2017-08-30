@@ -9,14 +9,14 @@ import L from 'leaflet/dist/leaflet.js';
 import 'leaflet/dist/leaflet.css';
 
 import nationalData from '../../../data/nationalData';
-import Capacity from '../../../components/Dashboard/Inputs/Capacity';
+import LoadZones from '../../../components/Dashboard/Inputs/LoadZones';
 
 import { setInfo, setLegend, setGeoJSON } from '../../../data/mapHelpers';
 
-const CapacityContainer = compose(
+const Container = compose(
   graphql(gql`
-    query uploadPP {
-      getPowerPlants
+    query fileQuery {
+      getLoadZones
     }
   `),
   withState('map', 'setMap', 0),
@@ -47,54 +47,10 @@ const CapacityContainer = compose(
           pane: 'labels',
         }).addTo(map);
 
-        let data = res.data.getPowerPlants[0]; // fixed
-        console.log(data, 'capacity container');
-
-        let arrayData = [];
-        let country = nationalData(data);
-
-        Object.entries(country.balancingAreas).forEach(([key, value]) => {
-          let capacities = value.properties.capacity.break_down;
-          capacities.map(a => {
-            arrayData.push({ tech: a.key, name: value.properties.name, value: a.value });
-            return a;
-          });
-        });
-
-        var entries = d3.nest().key(d => d.tech).entries(arrayData);
-        arrayData = [];
-        Object.entries(entries).forEach(([key, value]) => {
-          let obj = {};
-          let e = value.values;
-          e.map(a => {
-            obj.name = a.tech;
-            obj[a.name] = a.value;
-            return a;
-          });
-
-          arrayData.push(obj);
-        });
-        // hasta aqui
-        self.props.setGlobal({ name: 'global', values: arrayData });
-        self.props.setMap(map);
-        self.props.setCountry(country);
-        let mapInfo = setInfo();
-        let shapeLayers = setGeoJSON(country, map, self, mapInfo);
-        self.props.setMapInfo(mapInfo);
-        mapInfo.addTo(map);
-        let mapLegend = setLegend(country);
-        mapLegend.addTo(map);
-
-        L.control.layers(shapeLayers).addTo(map);
-
-        L.control
-          .zoom({
-            position: 'topright',
-          })
-          .addTo(map);
+        // let data = res.data.getLoadZones[0]; // fixed
       });
     },
   })
-)(Capacity);
+)(LoadZones);
 
-export default CapacityContainer;
+export default Container;

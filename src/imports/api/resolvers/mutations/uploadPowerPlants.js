@@ -12,6 +12,7 @@ export default function uploadPowerPlants(root, { file }) {
   });
 
   let filename = file.name;
+  console.log(filename);
   filename = filename.slice(0, -4);
 
   PowerPlants.remove({});

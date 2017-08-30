@@ -3,7 +3,7 @@ import BarChart from '../../Charts/NeeliChart';
 import { Row, Col, Card, CardHeader } from 'reactstrap';
 
 const Emissions = props => {
-  console.log(props);
+  console.log('');
 
   return (
     <Row>

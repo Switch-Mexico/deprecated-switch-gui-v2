@@ -32,7 +32,6 @@ const Container = compose(
       let self = this; // save de reference to the component context
       this.props.data.refetch().then(res => {
         let data = res.data.getTransmissionLines[0]; // fixed
-        console.log(data);
         data = data.rows;
         let period = getYears(data);
         self.props.setPeriod(period);

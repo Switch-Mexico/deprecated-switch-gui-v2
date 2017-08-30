@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  Nav,
-  NavItem,
-  NavDropdown,
-  DropdownItem,
-  DropdownToggle,
-  DropdownMenu,
-  NavLink,
-} from 'reactstrap';
+import { Nav, NavItem } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -30,30 +23,17 @@ export default class Example extends React.Component {
       <div className="pills-right">
         <Nav pills>
           <NavItem>
-            <NavLink href="#" active>
-              Link
+            <NavLink replace to="/inputs/capacity">
+              Capacity
             </NavLink>
           </NavItem>
-          <NavDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle nav caret>
-              Dropdown
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem header>Header</DropdownItem>
-              <DropdownItem disabled>Action</DropdownItem>
-              <DropdownItem>Another Action</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Another Action</DropdownItem>
-            </DropdownMenu>
-          </NavDropdown>
           <NavItem>
-            <NavLink href="/inputs">Capacity</NavLink>
+            <NavLink replace to="/inputs/loadZones">
+              Load Zones
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/inputs/capacity">Load Zones</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink disabled href="#">
+            <NavLink disabled replace to="#">
               Energy Evolution
             </NavLink>
           </NavItem>

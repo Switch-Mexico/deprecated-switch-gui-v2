@@ -4,9 +4,15 @@
   flex-direction: column;
   background-color: #fff;
   border: 1px solid #cfd8dc;
+  width: 100%;
 }
 
 .card-block {
   flex: 1 1 auto;
   padding: 1.25rem;
+}
+
+.card-body{
+  height: 100%;
+  width: 100%;
 }
