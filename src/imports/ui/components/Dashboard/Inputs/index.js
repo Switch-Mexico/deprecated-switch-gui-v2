@@ -1,5 +1,5 @@
 import Header from './header';
-import Body from './inputs';
+import Body from './inputsRouter';
 
 const Inputs = () =>
   <div

@@ -11,8 +11,6 @@ import 'leaflet/dist/leaflet.css';
 import nationalData from '../../../data/nationalData';
 import LoadZones from '../../../components/Dashboard/Inputs/LoadZones';
 
-import { setInfo, setLegend, setGeoJSON } from '../../../data/mapHelpers';
-
 const Container = compose(
   graphql(gql`
     query fileQuery {

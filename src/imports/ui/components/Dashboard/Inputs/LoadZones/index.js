@@ -1,7 +1,7 @@
 import '/imports/ui/styles/App/HomeContainer.scss';
-import { Row, Col, Card, CardHeader, CardBlock } from 'reactstrap';
+import { Row, Card, CardHeader, CardBlock } from 'reactstrap';
 
-import BarChart from '/imports/ui/components/Dashboard/Charts/BarChart';
+import BarChart from './BarChart';
 
 const LoadZones = props =>
   <div style={{ marginTop: `${60}px`, width: `${100}%`, height: `${100}%` }}>

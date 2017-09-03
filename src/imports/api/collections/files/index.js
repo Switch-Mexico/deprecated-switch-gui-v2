@@ -22,8 +22,6 @@ const Files = new FilesCollection({
     return 'Please upload file, with size equal or less than 10MB';
   },
   onAfterUpload(file) {
-    console.log('onAfterUpload');
-    console.log(file.versions, 'file');
     // Move file to GridFS
     Object.keys(file.versions).forEach(versionName => {
       const metadata = {

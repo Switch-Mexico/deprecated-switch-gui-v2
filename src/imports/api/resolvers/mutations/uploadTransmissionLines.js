@@ -13,7 +13,6 @@ export default function uploadTransmissionLines(root, { file }) {
 
   let filename = file.name;
   filename = filename.slice(0, -4);
-  console.log(filename, 'mutation');
   TransmissionLines.remove({});
   data = d3.tsvParse(data);
   let rows = [];

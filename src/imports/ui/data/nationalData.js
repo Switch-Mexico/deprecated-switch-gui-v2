@@ -13,6 +13,8 @@ function capitalize(str) {
 }
 
 export default function nationalData(data) {
+  let newCountry = country();
+
   data = data.rows.filter(
     obj => obj.being_built != 'generic_project' && obj.being_built != 'optimization'
   );
@@ -111,17 +113,17 @@ export default function nationalData(data) {
     let total = Number(totalCapacity[0].value);
     total = total.toFixed(2);
 
-          for (var key in country.balancingAreas) { // eslint-disable-line
-            if (b_a.key == country.balancingAreas[key].properties.ID) { // eslint-disable-line
-        country.balancingAreas[key].properties.index = key;
-              country.balancingAreas[key].properties.capacity = { total: total, break_down: dato }; // eslint-disable-line
+          for (var key in newCountry.balancingAreas) { // eslint-disable-line
+            if (b_a.key == newCountry.balancingAreas[key].properties.ID) { // eslint-disable-line
+        newCountry.balancingAreas[key].properties.index = key;
+              newCountry.balancingAreas[key].properties.capacity = { total: total, break_down: dato }; // eslint-disable-line
       }
     }
 
-    country.loadZones = loadZonesObject;
+    newCountry.loadZones = loadZonesObject;
   });
 
-  let balancingAreas = country.balancingAreas;
+  let balancingAreas = newCountry.balancingAreas;
 
   let newBalancingAreas = {};
 
@@ -131,9 +133,7 @@ export default function nationalData(data) {
     }
   }
 
-  country.balancingAreas = newBalancingAreas;
+  newCountry.balancingAreas = newBalancingAreas;
 
-  // console.log(country);
-
-  return country;
+  return newCountry;
 }

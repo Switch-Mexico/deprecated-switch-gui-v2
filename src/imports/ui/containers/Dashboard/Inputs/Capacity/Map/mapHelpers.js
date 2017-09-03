@@ -2,7 +2,40 @@ import L from 'leaflet/dist/leaflet.js';
 
 // Function to set the bottom left legend listing the balancing areas names
 
-export function setLegend(country) {
+export function addDataToMap(data, a) {
+  a.props.setMap(L.map(a.refs.national_map, { zoomControl: false, minZoom: 4 }));
+
+  a.props.map.setView([23.8, -102.1], 5);
+  a.props.map.createPane('shapes');
+  a.props.map.getPane('shapes').style.zIndex = 900;
+  a.props.map.createPane('labels');
+  a.props.map.getPane('labels').style.zIndex = 901;
+  L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+    attribution: '©OpenStreetMap, ©CartoDB',
+  }).addTo(a.props.map);
+  L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
+    attribution: '©OpenStreetMap, ©CartoDB',
+    pane: 'labels',
+  }).addTo(a.props.map);
+
+  let mapInfo = setInfo();
+  let country = data;
+  let shapeLayers = setGeoJSON(country, a.props.map, a, mapInfo);
+  mapInfo.addTo(a.props.map);
+  let mapLegend = setLegend(country, a);
+  a.props.map.addLayer(shapeLayers.Switch);
+  mapLegend.addTo(a.props.map);
+  let controller = L.control.layers(shapeLayers).addTo(a.props.map);
+  a.props.setLayers(controller);
+
+  L.control
+    .zoom({
+      position: 'topright',
+    })
+    .addTo(a.props.map);
+}
+
+export function setLegend(country, self) {
   let legend = L.control({ position: 'bottomleft' });
 
   legend.onAdd = function() {
@@ -14,6 +47,7 @@ export function setLegend(country) {
     }
     return div;
   };
+  self.props.setLegend(legend);
 
   return legend;
 }
@@ -66,7 +100,8 @@ export function zoomToFeature(layer, map) {
   map.fitBounds(layer.getBounds());
 }
 // Function to handle a click over a polygon, it will update the labels
-export function handleClick(data, self) {
+export function handleClick(data, a) {
+  console.log(data);
   let arrayData = [];
   let name = data.properties.name;
   let type = data ? data.type : 'none'; // FIXME temporal approach to skip loadZones w/o data
@@ -78,12 +113,10 @@ export function handleClick(data, self) {
     return a;
   });
 
-  self.props.setColor(color);
-
   if (type == 'balancingArea') {
-    self.props.setBalancingArea({ name: name, values: arrayData });
+    a.props.setBalancingArea({ name: name, values: arrayData, color: color });
   } else if (type == 'loadZone') {
-    self.props.setLoadZone({ name: name, values: arrayData });
+    a.props.setLoadZone({ name: name, values: arrayData });
   }
 }
 
@@ -121,6 +154,7 @@ export function setInfo(props) {
 // Function to configure all of he features (such as higlight, onclick, resethighlight etc)
 
 export function setGeoJSON(country, map, a, mapInfo) {
+  var newCountry = JSON.parse(JSON.stringify(country));
   let shapeLayers = {};
   let shapeNames = {
     Prodesen: '',
@@ -132,12 +166,11 @@ export function setGeoJSON(country, map, a, mapInfo) {
     let geojsonLayers = [];
 
     for (let key in country.balancingAreas) {
-      // functon to iterate over the gejson files and attach them a click funcion per feature (polygon, point .. sh/ape)
+      // function to iterate over the gejson files and attach them a click funcion per feature (polygon, point .. sh/ape)
       let keys = Object.keys(country.loadZones);
 
       let newShapes = [];
       let shapes = country.balancingAreas[key].properties.shape[shapeName].features;
-
       shapes.map(obj =>
         keys.map(k => {
           if (obj.properties.ID === k) {
@@ -145,9 +178,11 @@ export function setGeoJSON(country, map, a, mapInfo) {
           }
         })
       );
-      country.balancingAreas[key].properties.shape[shapeName].features = newShapes;
+
+      newCountry.balancingAreas[key].properties.shape[shapeName].features = newShapes;
+
       geojsonLayers.push(
-        L.geoJson(country.balancingAreas[key].properties.shape[shapeName], {
+        L.geoJson(newCountry.balancingAreas[key].properties.shape[shapeName], {
           fillColor: country.balancingAreas[key].properties.color,
           weight: 2,
           opacity: 1,

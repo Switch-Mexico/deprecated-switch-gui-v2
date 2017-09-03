@@ -40,7 +40,6 @@ var djsConfig = {
 const Dropzone = props => {
   var eventHandlers = {
     addedfile: file => {
-      console.log(file, 'file');
       switch (file.name) {
         case 'PowerPlants.csv': {
           props.handlePowerPlants(file);
@@ -98,29 +97,6 @@ const DropzoneContainer = compose(
     `,
     {
       name: 'uploadPP',
-      options: {
-        update: (proxy, { data: { uploadPowerPlants } }) => {
-          console.log(proxy, 'proxy 1');
-          const data = proxy.readQuery({
-            query: gql`
-              query getPP {
-                getPowerPlants
-              }
-            `,
-          });
-          console.log(data, uploadPowerPlants);
-          // data.getPowerPlants.push(uploadPowerPlants);
-          console.log(proxy, 'proxy');
-          proxy.writeQuery({
-            query: gql`
-              query getPP {
-                getPowerPlants
-              }
-            `,
-            data,
-          });
-        },
-      },
     }
   ),
   graphql(

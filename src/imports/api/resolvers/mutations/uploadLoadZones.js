@@ -12,7 +12,6 @@ export default function uploadLoadZones(root, { file }) {
   });
 
   let filename = file.name;
-  console.log(filename);
   filename = filename.slice(0, -4);
 
   LoadZones.remove({});

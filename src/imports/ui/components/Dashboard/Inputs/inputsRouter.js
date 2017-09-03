@@ -1,8 +1,7 @@
 import '/imports/ui/styles/App/HomeContainer.scss';
 import { Col } from 'reactstrap';
-import Capacity from '/imports/ui/containers/Dashboard/Inputs/capacityContainer';
+import Capacity from '/imports/ui/containers/Dashboard/Inputs/Capacity/capacityContainer';
 import LoadZones from '/imports/ui/containers/Dashboard/Inputs/loadZonesContainer';
-import Emissions from '/imports/ui/components/Dashboard/Information/Emissions';
 
 import { Switch, Route } from 'react-router-dom';
 
