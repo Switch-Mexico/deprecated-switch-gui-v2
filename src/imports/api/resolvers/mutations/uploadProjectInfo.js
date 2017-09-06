@@ -15,17 +15,23 @@ export default function uploadProjectInfo(root, { file }) {
   filename = filename.slice(0, -4);
 
   ProjectInfo.remove({});
-  data = d3.csvParse(data);
+  data = d3.tsvParse(data);
   let rows = [];
 
   data.forEach((row, i) => {
-    rows.push(row);
+    let id = row.proj_load_zone.substring(0,2);
+    let r = {'id':id, 'name': row.PROJECT, 'capacity_limit': row.proj_capacity_limit_mw, 'load_zone':row.proj_load_zone, 'o_m':row.proj_variable_o_m}
+    rows.push(r);
   });
 
+  data = d3
+  .nest()
+  .key(d => d.id)
+  .rollup(d => d)
+  .entries(rows);     
 
-  
-  let columns = data.columns;
-  ProjectInfo.insert({ name: filename, rows: rows, columns: columns });
+
+  ProjectInfo.insert({ name: filename, data: data });
 
   return ProjectInfo.findOne();
 }

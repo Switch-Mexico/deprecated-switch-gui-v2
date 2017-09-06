@@ -102,7 +102,7 @@ export default function nationalData(data) {
 
     let totalCapacity = d3
       .nest()
-            .key(d => 'total')                            // eslint-disable-line
+      .key(d => 'total')                            // eslint-disable-line
       .rollup(d => {
         let val = Number(d3.sum(d, g => g.value));
         val = val.toFixed(2);
