@@ -1,8 +1,8 @@
-import LoadZones from '../../collections/loadZones';
+import ProjectInfo from '../../collections/projectInfo';
 import fs from 'fs';
 import d3 from 'd3';
 
-export default function uploadLoadZones(root, { file }) {
+export default function uploadProjectInfo(root, { file }) {
   let data = fs.readFileSync(file.path, 'utf-8', (err, d) => {
     if (err) {
       alert(`An error ocurred reading the file :${err.message}`);
@@ -14,7 +14,7 @@ export default function uploadLoadZones(root, { file }) {
   let filename = file.name;
   filename = filename.slice(0, -4);
 
-  LoadZones.remove({});
+  ProjectInfo.remove({});
   data = d3.csvParse(data);
   let rows = [];
 
@@ -22,7 +22,7 @@ export default function uploadLoadZones(root, { file }) {
     rows.push(row);
   });
   let columns = data.columns;
-  LoadZones.insert({ name: filename, rows: rows, columns: columns });
+  ProjectInfo.insert({ name: filename, rows: rows, columns: columns });
 
-  return LoadZones.findOne();
+  return ProjectInfo.findOne();
 }

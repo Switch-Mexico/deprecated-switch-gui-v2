@@ -1,7 +1,7 @@
 import '/imports/ui/styles/App/HomeContainer.scss';
 import { Col } from 'reactstrap';
 import Capacity from '/imports/ui/containers/Dashboard/Inputs/Capacity/capacityContainer';
-import LoadZones from '/imports/ui/containers/Dashboard/Inputs/loadZonesContainer';
+import ProjectInfo from '/imports/ui/containers/Dashboard/Inputs/ProjectInfo/projectInfoContainer';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ const Inputs = () =>
     <Switch>
       <Route exact path="/inputs" component={Capacity} />
       <Route path="/inputs/capacity" component={Capacity} />
-      <Route path="/inputs/loadZones" component={LoadZones} />
+      <Route path="/inputs/projectInfo" component={ProjectInfo} />
     </Switch>
   </Col>;
 

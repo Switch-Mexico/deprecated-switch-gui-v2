@@ -7,7 +7,7 @@ const Query = `
     files: [JSON]
     getPowerPlants: [JSON]
     getTransmissionLines: [JSON]
-    getLoadZones: [JSON]
+    getProjectInfo: [JSON]
   }
 `;
 export default () => [Query, User];

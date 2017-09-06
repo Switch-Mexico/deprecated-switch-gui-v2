@@ -4,12 +4,12 @@ import user from './user';
 import files from './files';
 import getPowerPlants from './getPowerPlants';
 import getTransmissionLines from './getTransmissionLines';
-import getLoadZones from './getLoadZones';
+import getProjectInfo from './getProjectInfo';
 
 export default {
   files,
   getTransmissionLines,
-  getLoadZones,
+  getProjectInfo,
   getPowerPlants,
   me,
   @Roles.action('viewUser') user,

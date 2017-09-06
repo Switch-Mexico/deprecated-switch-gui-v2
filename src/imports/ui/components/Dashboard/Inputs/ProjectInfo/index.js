@@ -7,10 +7,10 @@ const LoadZones = props =>
   <div style={{ marginTop: `${60}px`, width: `${100}%`, height: `${100}%` }}>
     <Row style={{ height: `${50}%` }}>
       <Card style={{ marginBottom: `${10}px` }}>
-        <CardHeader>Current Scenario of the Mexico's Installed Capacity </CardHeader>
+        <CardHeader>Project Information </CardHeader>
         <CardBlock className="card-body">
           <div
-            ref="national_map"
+            ref="project_info_map"
             className="chart-wrapper"
             style={{ height: `${100}%`, width: `${100}%` }}
           />

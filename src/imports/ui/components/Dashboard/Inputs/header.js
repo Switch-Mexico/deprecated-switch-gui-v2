@@ -28,8 +28,8 @@ export default class Example extends React.Component {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink replace to="/inputs/loadZones">
-              Load Zones
+            <NavLink replace to="/inputs/projectInfo">
+              Project Information
             </NavLink>
           </NavItem>
           <NavItem>

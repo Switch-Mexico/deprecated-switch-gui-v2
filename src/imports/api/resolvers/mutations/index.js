@@ -4,12 +4,12 @@ import updateUserProfile from './updateUserProfile';
 import uploadFile from './uploadFile';
 import uploadPowerPlants from './uploadPowerPlants';
 import uploadTransmissionLines from './uploadTransmissionLines';
-import uploadLoadZones from './uploadLoadZones';
+import uploadProjectInfo from './uploadProjectInfo';
 
 export default {
   updateEmail,
   updateUserAvatar,
-  uploadLoadZones,
+  uploadProjectInfo,
   updateUserProfile,
   uploadTransmissionLines,
   uploadFile,
