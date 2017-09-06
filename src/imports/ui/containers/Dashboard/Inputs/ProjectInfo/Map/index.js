@@ -9,7 +9,7 @@ import 'leaflet/dist/leaflet.css';
 
 import Map from '../../../../../components/Dashboard/Inputs/ProjectInfo/Map';
 import getCountry from '../../../../../data';
-import { addDataToMap, handleClick } from './mapHelpers';
+import { showCircles } from './mapHelpers';
 
 
 const Container = compose(
@@ -38,6 +38,7 @@ const Container = compose(
         attribution: '©OpenStreetMap, ©CartoDB',
         pane: 'labels',
       }).addTo(map);
+      showCircles(map);
 
     },
   })

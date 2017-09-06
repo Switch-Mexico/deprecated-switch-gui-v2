@@ -2,16 +2,18 @@ import { Row, Card, CardHeader, CardBlock } from 'reactstrap';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
-import BarChart from './BarChart';
+import BarChart from '../../../../containers/Dashboard/Inputs/ProjectInfo//Chart';
 import Map from '../../../../containers/Dashboard/Inputs/ProjectInfo/Map';
 
 const data = gql`
 query uploadPP {
-  getPowerPlants
+  getProjectInfo
 }
 `;
 
-const ProjectInfo = props =>
+const ProjectInfo = props => {
+  console.log(props,"index")
+  return (
   <div style={{ marginTop: `${60}px`, width: `${100}%`, height: `${100}%` }}>
     <Row style={{ height: `${50}%` }}>
       <Card style={{ marginBottom: `${10}px` }}>
@@ -27,7 +29,7 @@ const ProjectInfo = props =>
         <BarChart data={props.loadZone} color={props.color} />
       </Card>
     </Row>
-  </div>;
+  </div>)};
 
 const ProjectInfoWithData = graphql(data)(ProjectInfo);
 

@@ -8,7 +8,7 @@ import L from 'leaflet/dist/leaflet.js';
 import 'leaflet/dist/leaflet.css';
 
 import Transmission from '../../../components/Dashboard/Outputs/Transmission';
-import coordinates from '../../../data/Points/coordinates';
+import coordinates from '../../../data/load_zones/coordinates';
 import country from './data';
 import { drawPoints, setLegend, setInfo, showMap, getYears, showNewPoints } from './mapHelpers';
 

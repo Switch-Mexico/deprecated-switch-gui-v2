@@ -21,6 +21,9 @@ export default function uploadProjectInfo(root, { file }) {
   data.forEach((row, i) => {
     rows.push(row);
   });
+
+
+  
   let columns = data.columns;
   ProjectInfo.insert({ name: filename, rows: rows, columns: columns });
 

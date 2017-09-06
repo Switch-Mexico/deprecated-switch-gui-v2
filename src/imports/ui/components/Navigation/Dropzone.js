@@ -45,8 +45,8 @@ const Dropzone = props => {
           props.handlePowerPlants(file);
           break;
         }
-        case 'load_zones.csv': {
-          props.handleLoadZones(file);
+        case 'project_info.tab': {
+          props.handleProjectInfo(file);
           break;
         }
         case 'BuildTrans.tab': {
@@ -101,14 +101,14 @@ const DropzoneContainer = compose(
   ),
   graphql(
     gql`
-      mutation uploadLZ($file: FileInput) {
-        uploadLoadZones(file: $file)
+      mutation uploadPI($file: FileInput) {
+        uploadProjectInfo(file: $file)
       }
     `,
     {
-      name: 'uploadLZ',
+      name: 'uploadPI',
       options: {
-        update: (proxy, { data: { uploadLoadZones } }) => {
+        update: (proxy, { data: { uploadProjectInfo } }) => {
           // const data = proxy.readQuery({ query });
           // console.log(data, uploadLoadZones);
           // data.files.push(uploadFile);          FIXME
@@ -146,14 +146,14 @@ const DropzoneContainer = compose(
         ],
       });
     },
-    handleLoadZones: ({ uploadLZ }) => file => {
-      uploadLZ({
+    handleProjectInfo: ({ uploadPI }) => file => {
+      uploadPI({
         variables: { file },
         refetchQueries: [
           {
             query: gql`
-              query fileQuery {
-                getLoadZones
+              query getPI {
+                getProjectInfo
               }
             `,
           },

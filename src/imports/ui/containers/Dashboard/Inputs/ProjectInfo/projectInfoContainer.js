@@ -8,7 +8,7 @@ import ProjectInfo from '../../../../components/Dashboard/Inputs/ProjectInfo';
 
 const ProjectInfoContainer = compose(
   graphql(gql`
-    query uploadPP {
+    query uploadPI {
       getProjectInfo
     }
   `),
