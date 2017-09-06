@@ -1,5 +1,3 @@
-import '/imports/ui/styles/App/HomeContainer.scss';
-
 const CapacityMap = () =>
   <div
     id="national_map"
