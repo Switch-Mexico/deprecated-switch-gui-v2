@@ -146,3 +146,16 @@ ul, menu, dir {
   width: 70px!important;
   text-overflow: ellipsis!important;
 }
+
+
+.button-bottom{
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  margin: auto
+}
+
+.button-front{
+  z-index: 999999;
+}

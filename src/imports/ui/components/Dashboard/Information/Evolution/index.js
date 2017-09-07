@@ -2,6 +2,10 @@ import '/imports/ui/styles/App/HomeContainer.scss';
 import { Row, Col, Card, CardHeader, CardBlock } from 'reactstrap';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
+import Chart from'./Chart';
+import Chart2 from'./Chart2';
+import Buttons from './Buttons';
+
 
 const data = gql`
   query uploadPP {
@@ -22,9 +26,28 @@ const Evolution = props =>
       <Col xs="12" sm="12" lg="12" style={{ paddingLeft: `${0}px` }}>
         <Card style={{ height: `${100}%`, width: `${100}%` }}>
           <CardHeader> Evolution </CardHeader>
-          <CardBlock className="card-body">
-            <div>Evolution Page</div>
-          </CardBlock>
+          <Row style={{ height: `${50}%`, width: `${100}%`}}>
+            <Col xs="6" sm="6" lg="6" style={{ paddingLeft: `${0}px` }}>
+            </Col>
+            <Col xs="6" sm="6" lg="6" style={{ paddingLeft: `${0}px` }}>
+              <Chart />
+              <div className="button-front">
+              <Buttons />
+              </div>
+            </Col>
+          </Row>
+          <Row style={{ height: `${50}%`, width: `${100}%`}}>
+            <Col xs="6" sm="6" lg="6" style={{ paddingLeft: `${0}px` }}>
+
+              <Chart2/>
+
+              <div className="button-bottom">
+              <Buttons />
+              </div>
+            </Col>
+            <Col xs="6" sm="6" lg="6" style={{ paddingLeft: `${0}px` }}>
+            </Col>
+          </Row>
         </Card>
       </Col>
     </Row>
