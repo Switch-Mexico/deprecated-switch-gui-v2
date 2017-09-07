@@ -16,3 +16,10 @@
   width: 100%;
   padding : 0px!important;
 }
+
+
+.recharts-y-axis .recharts-cartesian-axis-tick-value {
+  transform: translateX(-6px);
+  text-overflow: ellipsis;
+
+}

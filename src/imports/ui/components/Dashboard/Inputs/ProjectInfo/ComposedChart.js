@@ -10,12 +10,16 @@ import {
   ComposedChart, Line
 } from 'recharts';
 
-const data = [{name: 'Page A', uv: 590, pv: 800, amt: 1400},
-              {name: 'Page B', uv: 868, pv: 967, amt: 1506},
-              {name: 'Page C', uv: 1397, pv: 1098, amt: 989},
-              {name: 'Page D', uv: 1480, pv: 1200, amt: 1228},
-              {name: 'Page E', uv: 1520, pv: 1108, amt: 1100},
-              {name: 'Page F', uv: 1400, pv: 680, amt: 1700}];
+const CustomizedLabel = React.createClass({
+  
+render () {
+  const {x, y, fill, value} = this.props;
+   return <text fontSize='56' 
+             fontFamily='sans-serif'
+             fill="white"
+             >{value}%</text>
+}
+});
 
 export default class C extends React.Component {
   render() {
@@ -26,12 +30,13 @@ export default class C extends React.Component {
         <ResponsiveContainer>
           <ComposedChart layout="vertical" width={600} height={400} data={this.props.data[0].value}
                 margin={{top: 20, right: 20, bottom: 20, left: 20}}>
-            <XAxis type="number"/>
-            <YAxis dataKey="name" type="category"/>
+            <XAxis type="number" unit=" MW" />
+            <YAxis dataKey="name" type="category" className="test-text" allowDataOverflow={true} 
+            padding={{ left: 20, right: 100 }} width={180} />
             <Tooltip/>
             <Legend/>
             <CartesianGrid stroke='#f5f5f5'/>
-            <Bar dataKey='Capacity Limit' barSize={20} fill='#413ea0'/>
+            <Bar dataKey='Capacity Limit' barSize={15} fill='#413ea0' unit=" MW"/>
           </ComposedChart>
         </ResponsiveContainer>
       );

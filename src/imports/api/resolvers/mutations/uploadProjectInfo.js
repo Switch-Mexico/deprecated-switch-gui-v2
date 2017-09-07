@@ -25,10 +25,15 @@ export default function uploadProjectInfo(root, { file }) {
   ProjectInfo.remove({});
   data = d3.tsvParse(data);
   let rows = [];
-
+  
   data.forEach((row, i) => {
+    let name = humanize(row.PROJECT)
+    if (name.length > 20){
+      name = humanize(row.PROJECT).substring(0,20).concat('...');
+      console.log(name)
+   }
     let id = row.proj_load_zone.substring(0,2);
-    let r = {'id':id, 'name': humanize(row.PROJECT), 'Capacity Limit': Number(row.proj_capacity_limit_mw), 'load_zone':row.proj_load_zone, 'o_m':Number(row.proj_variable_o_m)}
+    let r = {'id':id, 'name': name, 'Capacity Limit': Number(row.proj_capacity_limit_mw), 'load_zone':row.proj_load_zone, 'o_m':Number(row.proj_variable_o_m)}
     rows.push(r);
   });
 
