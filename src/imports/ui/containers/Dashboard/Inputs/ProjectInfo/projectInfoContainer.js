@@ -12,7 +12,7 @@ const ProjectInfoContainer = compose(
       getProjectInfo
     }
   `),
-  withState('loadZoneID', 'setLoadZoneID', '00'),
+  withState('loadZoneID', 'setLoadZoneID', '26'),
 )(ProjectInfo);
 
 export default ProjectInfoContainer;

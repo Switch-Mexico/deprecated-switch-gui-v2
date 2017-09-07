@@ -32,7 +32,7 @@ export default class C extends React.Component {
                 margin={{top: 20, right: 20, bottom: 20, left: 20}}>
             <XAxis type="number" unit=" MW" />
             <YAxis dataKey="name" type="category" className="test-text" allowDataOverflow={true} 
-            padding={{ left: 20, right: 100 }} width={180} />
+            padding={{ left: 20, right: 200 }} width={180} />
             <Tooltip/>
             <Legend/>
             <CartesianGrid stroke='#f5f5f5'/>

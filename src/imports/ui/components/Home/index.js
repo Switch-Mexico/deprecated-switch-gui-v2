@@ -11,7 +11,7 @@ import MainMenu from '/imports/ui/components/Navigation/Menu';
 import Inputs from '/imports/ui/components/Dashboard/Inputs';
 
 import Outputs from '/imports/ui/containers/Dashboard/Outputs/transmissionContainer';
-import Information from '/imports/ui/containers/Dashboard/Information/Emissions/emissionsContainer';
+import Information from '/imports/ui/components/Dashboard/Information';
 
 const Home = props =>
   <div id="outer-container">
