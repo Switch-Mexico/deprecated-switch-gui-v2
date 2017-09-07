@@ -23,17 +23,20 @@ const Evolution = props =>
     }}
   >
     <Row style={{ height: `${100}%` }}>
-      <Col xs="12" sm="12" lg="12" style={{ paddingLeft: `${0}px` }}>
+      <Col xs="12" sm="12" lg="12" style={{ paddingLeft: `${0}px`, paddingRight: `${0}px` }}>
         <Card style={{ height: `${100}%`, width: `${100}%` }}>
-          <CardHeader> Evolution </CardHeader>
           <Row style={{ height: `${50}%`, width: `${100}%`}}>
             <Col xs="6" sm="6" lg="6" style={{ paddingLeft: `${0}px` }}>
             </Col>
             <Col xs="6" sm="6" lg="6" style={{ paddingLeft: `${0}px` }}>
-              <Chart />
-              <div className="button-front">
-              <Buttons />
-              </div>
+              <Row style={{ height: `${90}%`, width: `${100}%`}}>
+                <Chart />
+              </Row>
+              <Row style={{ height: `${10}%`, width: `${100}%`}}>
+                <div className="button-top">
+                  <Buttons />
+                </div>
+              </Row>
             </Col>
           </Row>
           <Row style={{ height: `${50}%`, width: `${100}%`}}>

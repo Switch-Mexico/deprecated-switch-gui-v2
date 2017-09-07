@@ -29,7 +29,6 @@ class Buttons extends Component {
   render() {
     return (
       <div>
-        <h5>Radio Buttons</h5>
         <ButtonGroup>
           <Button color="primary" onClick={() => this.onRadioBtnClick(1)} active={this.state.rSelected === 1}>2021</Button>
           <Button color="primary" onClick={() => this.onRadioBtnClick(2)} active={this.state.rSelected === 2}>2030</Button>

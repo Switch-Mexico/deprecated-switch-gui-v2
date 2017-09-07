@@ -24,7 +24,7 @@ const Capacity = props =>
     <Row style={{ height: `${100}%` }}>
       <Col xs="8" sm="8" lg="8" style={{ paddingLeft: `${0}px` }}>
         <Card style={{ height: `${100}%`, width: `${100}%` }}>
-          <CardHeader>Current Scenario of the Mexico's Installed Capacity </CardHeader>
+          <CardHeader> Mexico </CardHeader>
           <CardBlock className="card-body">
             <Map
               setLoadZone={props.setLoadZone}
@@ -43,7 +43,7 @@ const Capacity = props =>
               height: `${100}%`,
             }}
           >
-            <CardHeader>Country's Installed Capacity [MW]</CardHeader>
+            <CardHeader>Total Installed Capacity [MW]</CardHeader>
             <StackedChart />
           </Card>
         </Row>
@@ -54,7 +54,7 @@ const Capacity = props =>
               width: `${100}%`,
             }}
           >
-            <CardHeader> Installed Capacity per Balancing Area [MW]</CardHeader>
+            <CardHeader> Installed Capacity for each Balancing Area [MW]</CardHeader>
             <BarChart data={props.balancingArea} color={props.balancingArea.color} />
           </Card>
         </Row>
@@ -65,7 +65,7 @@ const Capacity = props =>
               width: `${100}%`,
             }}
           >
-            <CardHeader>Installed Capacity per Load Zone [MW]</CardHeader>
+            <CardHeader>Installed Capacity for each Load Zone [MW]</CardHeader>
             <BarChart data={props.loadZone} color={props.balancingArea.color} />
           </Card>
         </Row>

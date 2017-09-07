@@ -150,12 +150,18 @@ ul, menu, dir {
 
 .button-bottom{
   position: absolute;
-  bottom: 25px;
+  bottom: 20px;
   left: 0;
   right: 0;
   margin: auto
 }
 
-.button-front{
-  z-index: 999999;
+.button-top{
+
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-right: 35px;
 }

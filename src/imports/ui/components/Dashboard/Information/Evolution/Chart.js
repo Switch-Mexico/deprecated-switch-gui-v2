@@ -2,8 +2,9 @@ import React from 'react';
 import {PieChart, Pie, Sector, Cell, ResponsiveContainer} from 'recharts';
 
 
-const data = [{name: 'Group A', value: 400}, {name: 'Group B', value: 300},
-                  {name: 'Group C', value: 300}, {name: 'Group D', value: 200}];
+const data = [{name: 'Hydroelectric', value: 400}, {name: 'Combined Cycle', value: 300},
+{name: 'Eolic', value: 300}, {name: 'Bioenergy', value: 200},
+{name: 'Geothermal', value: 278}, {name: 'Solar', value: 189}]
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];   
 
@@ -76,9 +77,9 @@ const TwoLevelPieChart = React.createClass({
             onMouseEnter={this.onPieEnter}
             data={data} 
 
-            innerRadius={100}
-            outerRadius={140} 
-
+            innerRadius={90}
+            outerRadius={120} 
+            cy={170} 
             fill="#898989">
             {
               data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
