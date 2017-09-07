@@ -21,17 +21,17 @@ export default class C extends React.Component {
   render() {
     console.log(this.props)
     if (true) {
+
       return (
         <ResponsiveContainer>
-          <ComposedChart layout="vertical" width={600} height={400} data={data}
+          <ComposedChart layout="vertical" width={600} height={400} data={this.props.data[0].value}
                 margin={{top: 20, right: 20, bottom: 20, left: 20}}>
             <XAxis type="number"/>
             <YAxis dataKey="name" type="category"/>
             <Tooltip/>
             <Legend/>
             <CartesianGrid stroke='#f5f5f5'/>
-            <Bar dataKey='pv' barSize={20} fill='#413ea0'/>
-            <Line dataKey='uv' stroke='#e41a1c'/>
+            <Bar dataKey='Capacity Limit' barSize={20} fill='#413ea0'/>
           </ComposedChart>
         </ResponsiveContainer>
       );

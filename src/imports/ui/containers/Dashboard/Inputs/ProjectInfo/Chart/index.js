@@ -18,11 +18,13 @@ class ComposedChart extends React.Component {
     }).isRequired,
   };
   render() {
-    if (this.props.data.getPowerPlants && this.props.data.getPowerPlants[0]) {
-      return <Chart data={this.props.data.getPowerPlants[0].chartData} />;
+    console.log(this.props,"Chart")
+    if (this.props.data.getProjectInfo && this.props.data.getProjectInfo[0]) {
+      let data = this.props.data.getProjectInfo[0].data;
+      data = data.filter(obj => obj.key == this.props.loadZoneID);
+      return <Chart data={data}  />;
     }
-
-    return <Chart  />;
+    return (<div>Loading</div>);
   }
 }
 

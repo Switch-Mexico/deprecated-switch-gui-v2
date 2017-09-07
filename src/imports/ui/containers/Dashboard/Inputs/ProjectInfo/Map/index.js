@@ -15,14 +15,12 @@ import { showCircles } from './mapHelpers';
 const Container = compose(
   graphql(gql`
     query fileQuery {
-      getPowerPlants
+      getProjectInfo
     }
   `),
-  withState('layers', 'setLayers', 0),
-  withState('map', 'setMap', 0),
   lifecycle({
     componentWillReceiveProps(prevProps) {
-      
+      console.log(this.props,"willreceive")
     },
     componentDidMount() {
       let map = L.map(this.refs.project_info_map, { zoomControl: false, minZoom: 4 });
@@ -38,8 +36,7 @@ const Container = compose(
         attribution: '©OpenStreetMap, ©CartoDB',
         pane: 'labels',
       }).addTo(map);
-      showCircles(map);
-
+      showCircles(map,this.props);
     },
   })
 )(Map);

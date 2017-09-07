@@ -19,14 +19,14 @@ const ProjectInfo = props => {
       <Card style={{ marginBottom: `${10}px` }}>
         <CardHeader>Project Information </CardHeader>
         <CardBlock className="card-body">
-          <Map />
+          <Map setLoadZoneID={props.setLoadZoneID}/>
         </CardBlock>
       </Card>
     </Row>
     <Row style={{ height: `${45}%` }}>
       <Card style={{ marginBottom: `${20}px`, width: `${100}%` }}>
         <CardHeader>Installed Capacity per Load Zone [MW]</CardHeader>
-        <BarChart data={props.loadZone} color={props.color} />
+        <BarChart loadZoneID={props.loadZoneID} />
       </Card>
     </Row>
   </div>)};

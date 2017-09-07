@@ -2,6 +2,14 @@ import ProjectInfo from '../../collections/projectInfo';
 import fs from 'fs';
 import d3 from 'd3';
 
+function humanize(str) {
+  var frags = str.split('_');
+  for (let i=0; i<frags.length; i++) {
+    frags[i] = frags[i].charAt(0).toUpperCase() + frags[i].slice(1);
+  }
+  return frags.join(' ');
+}
+
 export default function uploadProjectInfo(root, { file }) {
   let data = fs.readFileSync(file.path, 'utf-8', (err, d) => {
     if (err) {
@@ -20,7 +28,7 @@ export default function uploadProjectInfo(root, { file }) {
 
   data.forEach((row, i) => {
     let id = row.proj_load_zone.substring(0,2);
-    let r = {'id':id, 'name': row.PROJECT, 'capacity_limit': row.proj_capacity_limit_mw, 'load_zone':row.proj_load_zone, 'o_m':row.proj_variable_o_m}
+    let r = {'id':id, 'name': humanize(row.PROJECT), 'Capacity Limit': Number(row.proj_capacity_limit_mw), 'load_zone':row.proj_load_zone, 'o_m':Number(row.proj_variable_o_m)}
     rows.push(r);
   });
 
@@ -29,7 +37,6 @@ export default function uploadProjectInfo(root, { file }) {
   .key(d => d.id)
   .rollup(d => d)
   .entries(rows);     
-
 
   ProjectInfo.insert({ name: filename, data: data });
 
