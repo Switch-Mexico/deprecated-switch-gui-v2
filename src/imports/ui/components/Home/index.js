@@ -19,7 +19,7 @@ const Home = props =>
     <main id="page-wrap">
       <Switch>
         <Route exact path="/" component={Information} />
-        <Route exact path="/information" component={Information} />
+        <Route path="/information" component={Information} />
         <Route path="/inputs" component={Inputs} />
         <Route exact path="/outputs" component={Outputs} />
       </Switch>
