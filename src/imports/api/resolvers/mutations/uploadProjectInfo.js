@@ -30,7 +30,6 @@ export default function uploadProjectInfo(root, { file }) {
     let name = humanize(row.PROJECT)
     if (name.length > 20){
       name = humanize(row.PROJECT).substring(0,20).concat('...');
-      console.log(name)
    }
     let load_zone = humanize(row.proj_load_zone.substring(3));
     let id = row.proj_load_zone.substring(0,2);
@@ -42,7 +41,12 @@ export default function uploadProjectInfo(root, { file }) {
   .nest()
   .key(d => d.id)
   .rollup(d => d)
-  .entries(rows);     
+  .entries(rows); 
+  
+  data.forEach((row, i) => {
+    let total = Number(d3.sum(row.value, g => g['Capacity Limit']));
+    row.total_capacity_limit = total;
+  });
 
   ProjectInfo.insert({ name: filename, data: data });
 

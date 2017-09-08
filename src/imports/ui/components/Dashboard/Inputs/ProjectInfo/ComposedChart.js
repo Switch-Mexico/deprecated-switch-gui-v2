@@ -36,7 +36,7 @@ export default class C extends React.Component {
             <Tooltip/>
             <Legend/>
             <CartesianGrid stroke='#f5f5f5'/>
-            <Bar dataKey='Capacity Limit' barSize={15} fill='#413ea0' unit=" MW"/>
+            <Bar dataKey='Capacity Limit' barSize={15} fill='#413ea0' unit=" [MW]"/>
           </ComposedChart>
         </ResponsiveContainer>
       );
