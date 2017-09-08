@@ -23,16 +23,28 @@ const ProjectInfo = props => {
         </Card>
       </Col>
       <Col xs="3" sm="3" lg="3" style={{ paddingLeft: `${0}px`, height: `${100}%`, paddingRight: `${0}px` }}>
-        <Row style={{ height: `${35}%`, paddingLeft: `${15}px`, paddingRight: `${15}px` }}>
-           <Card style={{ marginBottom: `${10}px`, height: `${100}%`, width: `${100}%`  }}>
-            <CardHeader>Load Zone Name</CardHeader>
-            {props.loadZoneName}
+        <Row style={{ height: `${33}%`, paddingLeft: `${15}px`, paddingRight: `${15}px` }}>
+           <Card style={{ marginBottom: `${10}px`, height: `${100}%`, width: `${100}%`, background:'#d1d5d7'  }}>  
+            <div className='card-details' >
+            <div className='card-big-details'><span>{props.loadZoneName}</span></div>
+            <div className='card-small-details'>Load Zone Name</div>
+            </div>
           </Card>
         </Row>
-        <Row style={{ height: `${65}%`, paddingLeft: `${15}px`, paddingRight: `${15}px`,paddingTop: `${10}px` }}>
-          <Card style={{ marginBottom: `${10}px`, height: `${100}%`, width: `${100}%`  }}>
-            <CardHeader>Total Capacity Limit</CardHeader>
-            {props.totalCapacity}
+        <Row style={{ height: `${33}%`, paddingLeft: `${15}px`, paddingRight: `${15}px`,paddingTop: `${10}px` }}>
+          <Card style={{ marginBottom: `${10}px`, height: `${100}%`, width: `${100}%`, background:'#d1d5d7'  }}>
+            <div className='card-details' >
+              <div className='card-big-details'><span>{props.loadZoneID}</span></div>
+              <div className='card-small-details'>Load zone ID</div>
+            </div>
+          </Card>
+        </Row>
+        <Row style={{ height: `${33}%`, paddingLeft: `${15}px`, paddingRight: `${15}px`,paddingTop: `${10}px` }}>
+          <Card style={{ marginBottom: `${10}px`, height: `${100}%`, width: `${100}%`, background:'#d1d5d7'   }}>
+            <div className='card-details' >
+              <div className='card-big-details'><span>{props.totalCapacity}</span></div>
+              <div className='card-small-details'>Total Capacity Limit</div>
+            </div>
           </Card>
         </Row>
       </Col>

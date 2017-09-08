@@ -44,7 +44,7 @@ export default function uploadProjectInfo(root, { file }) {
   .entries(rows); 
   
   data.forEach((row, i) => {
-    let total = Number(d3.sum(row.value, g => g['Capacity Limit']));
+    let total = Number(d3.sum(row.value, g => g['Capacity Limit'])).toFixed(3);
     row.total_capacity_limit = total;
   });
 

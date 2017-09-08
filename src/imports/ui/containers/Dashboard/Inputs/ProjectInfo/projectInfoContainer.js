@@ -14,7 +14,7 @@ const ProjectInfoContainer = compose(
   `),
   withState('loadZoneID', 'setLoadZoneID', '26'),
   withState('loadZoneName', 'setLoadZoneName', 'No data'),
-  withState('totalCapacity', 'setTotalCapacity', ''),
+  withState('totalCapacity', 'setTotalCapacity', 0),
 )(ProjectInfo);
 
 export default ProjectInfoContainer;
