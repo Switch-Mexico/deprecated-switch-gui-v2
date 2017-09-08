@@ -20,10 +20,9 @@ class ComposedChart extends React.Component {
 
   componentWillReceiveProps(nextProps){
     console.log(this.props,nextProps, "wilreceiveprops");
-    console.log(data,"Chart");
     if (this.props.data.getProjectInfo && this.props.data.getProjectInfo[0]) {
-      let data = this.props.data.getProjectInfo[0].data;
-      data = data.filter(obj => obj.key == this.props.loadZoneID);
+      let data = nextProps.data.getProjectInfo[0].data;
+      data = data.filter(obj => obj.key == nextProps.loadZoneID);
       this.props.setLoadZoneName(data[0].value[0].load_zone);
       this.props.setTotalCapacity(data[0].total_capacity_limit)
     }

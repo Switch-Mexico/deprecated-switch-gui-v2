@@ -197,7 +197,6 @@ export function setGeoJSON(country, map, a, mapInfo) {
               zoomToFeature(layer, map);
               handleClick(country.loadZones[id], a);
             });
-
             layer.on('mouseover', e => {
               highlightFeature(layer, layer.feature.properties, map, country, key, a, mapInfo);
             });

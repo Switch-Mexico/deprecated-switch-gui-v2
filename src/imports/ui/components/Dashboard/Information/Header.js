@@ -23,7 +23,7 @@ export default class InformationHeader extends React.Component {
       <div className="pills-right">
         <Nav pills>
           <NavItem>
-            <NavLink replace to="/information/evolution">
+            <NavLink replace to="/information">
               Evolution
             </NavLink>
           </NavItem>

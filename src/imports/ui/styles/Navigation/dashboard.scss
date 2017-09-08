@@ -40,9 +40,13 @@
   text-align: right;
   position: relative;
   padding-right: 15px;
+  padding-left: 15px;  
   padding-top: 10px;
   color: #34495e;
   font-size: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 
@@ -59,4 +63,8 @@
   margin-top: 0px;  
   color : #999999;
   font-size: 20px;
+}
+
+.h4{
+  font-size: 10px;
 }

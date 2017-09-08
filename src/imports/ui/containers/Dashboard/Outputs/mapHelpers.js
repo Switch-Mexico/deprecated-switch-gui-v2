@@ -69,7 +69,7 @@ export function setInfo() {
 
   // method that we will use to update the control based on feature properties passed
   info.update = function(props) {
-    this._div.innerHTML = `<h4>Hover over a Transmission Line</h4>${props
+    this._div.innerHTML = `<h6>Hover over a transmission line</h6>${props
       ? `<b> From ${props.from} to ${props.to}</b><br />` + `Capacity: ${props.capacity}  [MW]`
       : ''}`;
   };
@@ -82,7 +82,7 @@ export function setLegend() {
 
   let legend = L.control({ position: 'bottomleft' });
   let color = ['#0067c8', '#ff4949'];
-  let transmissionLines = ['Legacy Transmission Lines', "Switch's Transmission Lines"];
+  let transmissionLines = ['Legacy transmission lines', "Switch's transmission lines"];
 
   legend.onAdd = function() {
     let div = L.DomUtil.create('div', 'info legend');

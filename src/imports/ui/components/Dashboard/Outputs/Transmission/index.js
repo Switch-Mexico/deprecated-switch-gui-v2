@@ -11,7 +11,7 @@ const Capacity = props => {
     <Row>
       <Col xs="8" sm="8" lg="8">
         <Card style={{ marginTop: `${60}px`, marginLeft: `${15}px`, width: `${750}px` }}>
-          <CardHeader>Mexico's Transmission Lines </CardHeader>
+          <CardHeader>Mexico's transmission lines </CardHeader>
           <CardBlock className="card-body">
             <div
               ref="transmission_map"
