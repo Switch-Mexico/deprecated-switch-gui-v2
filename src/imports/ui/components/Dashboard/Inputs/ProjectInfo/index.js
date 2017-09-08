@@ -32,6 +32,7 @@ const ProjectInfo = props => {
         <Row style={{ height: `${65}%`, paddingLeft: `${15}px`, paddingRight: `${15}px`,paddingTop: `${10}px` }}>
           <Card style={{ marginBottom: `${10}px`, height: `${100}%`, width: `${100}%`  }}>
             <CardHeader>Total Capacity Limit</CardHeader>
+            {props.totalCapacity}
           </Card>
         </Row>
       </Col>
@@ -39,7 +40,7 @@ const ProjectInfo = props => {
     <Row style={{ height: `${45}%` }}>
       <Card style={{marginTop: `${20}px`, marginBottom: `${20}px`, width: `${100}%` }}>
         <CardHeader>Capacity limit for each project. </CardHeader>
-        <BarChart loadZoneID={props.loadZoneID} setLoadZoneName={props.setLoadZoneName} />
+        <BarChart loadZoneID={props.loadZoneID} setLoadZoneName={props.setLoadZoneName} setTotalCapacity={props.setTotalCapacity} />
       </Card>
     </Row>
   </div>)};
