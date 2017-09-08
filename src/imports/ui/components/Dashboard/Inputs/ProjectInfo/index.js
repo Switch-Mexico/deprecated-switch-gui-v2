@@ -19,7 +19,7 @@ const ProjectInfo = props => {
       <Col xs="9" sm="9" lg="9" style={{ paddingLeft: `${0}px`, height: `${100}%` }}>
         <Card style={{ height: `${100}%`, width: `${100}%` }}>
           <CardHeader>Mexico electricity load zones.</CardHeader>
-            <Map setLoadZoneID={props.setLoadZoneID}/>
+            <Map setLoadZoneID={props.setLoadZoneID} setLoadZoneName={props.setLoadZoneName}/>
 
         </Card>
       </Col>
