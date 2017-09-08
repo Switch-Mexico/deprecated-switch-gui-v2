@@ -13,7 +13,7 @@
 </p>
 
 <h4>Preview</h4>
-	![Demo alpha](https://j.gifs.com/JZVzqD.gif)
+	![Demo](examples/gif.gif)
 <h3>Download</h3>
 <p>Builds are available for <strong>macOS</strong>, <strong>Debian</strong> and <strong>Windows</strong>. Visit <a href="https://github.com/Switch-Mexico/SWITCH/releases">SWITCH GitHub Releases</a></p>
 
