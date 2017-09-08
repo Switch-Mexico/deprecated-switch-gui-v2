@@ -7,7 +7,7 @@ const InformationRouter = () =>
   <Col xs="12" sm="12" lg="12" style={{ height: `${100}%` }}>
     <Switch>
       <Route path="/information" component={Evolution} />
-      <Route exact path="/information/evolution" component={Evolution} />
+      <Route path="/information/evolution" component={Evolution} />
     </Switch>
   </Col>;
 

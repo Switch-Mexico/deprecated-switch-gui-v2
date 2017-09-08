@@ -2,11 +2,24 @@ import React from 'react';
 import {PieChart, Pie, Sector, Cell, ResponsiveContainer} from 'recharts';
 
 
-const data = [{name: 'Hydroelectric', value: 400}, {name: 'Combined Cycle', value: 300},
-{name: 'Eolic', value: 300}, {name: 'Bioenergy', value: 200},
-{name: 'Geothermal', value: 278}, {name: 'Solar', value: 189}]
+const data = [{name: 'Hydroelectric', value: 11},
+              {name: 'Wind', value: 9},
+              {name: 'Combined Cycle', value: 67},
+              {name: 'Coal', value: 2},
+              {name: 'Bioenergy', value: 3},
+              {name: 'Photovoltaic', value: 5},
+              {name: 'Nuclear Power', value: 3}]
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];   
+const COLORS = ['#0088FE', 
+                '#bdc3c7',
+                '#e74c3c', 
+                '#2c3e50',
+                '#2ecc71',
+                '#f1c40f',
+                '#9b59b6',
+                ];  
+
+
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
@@ -47,7 +60,7 @@ const renderActiveShape = (props) => {
       />
       <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none"/>
       <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none"/>
-      <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#333">{`PV ${value}`}</text>
+      <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#333">{`Generation`}</text>
       <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} dy={18} textAnchor={textAnchor} fill="#999">
         {`(Rate ${(percent * 100).toFixed(2)}%)`}
       </text>
