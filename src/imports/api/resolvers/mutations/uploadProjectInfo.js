@@ -32,8 +32,9 @@ export default function uploadProjectInfo(root, { file }) {
       name = humanize(row.PROJECT).substring(0,20).concat('...');
       console.log(name)
    }
+    let load_zone = humanize(row.proj_load_zone.substring(3));
     let id = row.proj_load_zone.substring(0,2);
-    let r = {'id':id, 'name': name, 'Capacity Limit': Number(row.proj_capacity_limit_mw), 'load_zone':row.proj_load_zone, 'o_m':Number(row.proj_variable_o_m)}
+    let r = {'id':id, 'name': name, 'Capacity Limit': Number(row.proj_capacity_limit_mw), 'load_zone':load_zone, 'o_m':Number(row.proj_variable_o_m)}
     rows.push(r);
   });
 

@@ -20,7 +20,9 @@ const Container = compose(
   `),
   lifecycle({
     componentWillReceiveProps(prevProps) {
+
       console.log(this.props,"willreceive")
+      
     },
     componentDidMount() {
       let map = L.map(this.refs.project_info_map, { zoomControl: false, minZoom: 4 });
