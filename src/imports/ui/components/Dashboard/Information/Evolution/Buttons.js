@@ -32,7 +32,6 @@ class Buttons extends Component {
         <ButtonGroup>
           <Button color="primary" onClick={() => this.onRadioBtnClick(1)} active={this.state.rSelected === 1}>2021</Button>
           <Button color="primary" onClick={() => this.onRadioBtnClick(2)} active={this.state.rSelected === 2}>2030</Button>
-          <Button color="primary" onClick={() => this.onRadioBtnClick(3)} active={this.state.rSelected === 3}>2050</Button>
         </ButtonGroup>
       </div>
     );

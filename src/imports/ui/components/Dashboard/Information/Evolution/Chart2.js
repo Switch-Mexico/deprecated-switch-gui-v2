@@ -14,7 +14,7 @@ const StraightAnglePieChart = React.createClass({
   	return (
       <ResponsiveContainer>
         <PieChart>
-          <Pie startAngle={180} endAngle={0} data={data} cy={250} outerRadius={200} fill="#8884d8" label>
+          <Pie startAngle={180} endAngle={0} data={data} cy={250} outerRadius={180} fill="#8884d8" label>
           {
             data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
           }

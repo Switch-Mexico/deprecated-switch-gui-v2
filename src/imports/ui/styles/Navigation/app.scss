@@ -150,18 +150,21 @@ ul, menu, dir {
 
 .button-bottom{
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   left: 0;
   right: 0;
   margin: auto
 }
 
 .button-top{
-
   position: absolute;
-  bottom: -55px;
   left: 0;
   right: 0;
   margin: auto;
-  padding-right: 35px;
+}
+
+.custom-chart{
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
