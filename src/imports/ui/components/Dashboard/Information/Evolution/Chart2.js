@@ -1,40 +1,108 @@
 import React from 'react';
-import Buttons from './Buttons';
-
-import {ResponsiveContainer, PieChart, Pie, Legend, Cell} from 'recharts';
+import {PieChart, Pie, Sector, Cell, ResponsiveContainer} from 'recharts';
 
 
-const data = [{name: 'Hydroelectric', value: 11},
-{name: 'Wind', value: 9},
-{name: 'Combined Cycle', value: 67},
-{name: 'Coal', value: 2},
-{name: 'Bioenergy', value: 3},
-{name: 'Photovoltaic', value: 5},
-{name: 'Nuclear Power', value: 3}]
+const data = [{name: 'Combined Cycle', value: 67},
+              {name: 'Coal', value: 2},
+              {name: 'Bioenergy', value: 3},
+              {name: 'Photovoltaic', value: 5},
+              {name: 'Nuclear Power', value: 3}{name: 'Hydroelectric', value: 11},
+              {name: 'Wind', value: 9},
+              ]
 
-const COLORS = ['#0088FE', 
-  '#bdc3c7',
-  '#e74c3c', 
-  '#2c3e50',
-  '#2ecc71',
-  '#f1c40f',
-  '#9b59b6',
-  ];  
+const COLORS = ['#e74c3c', 
+                '#2c3e50',
+                '#2ecc71',
+                '#f1c40f',
+                '#9b59b6',
+                '#0088FE', 
+                '#bdc3c7',
+                
+                ];  
 
-const StraightAnglePieChart = React.createClass({
+
+
+const renderActiveShape = (props) => {
+  const RADIAN = Math.PI / 180;
+  const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle,
+    fill, payload, percent, value } = props;
+  const sin = Math.sin(-RADIAN * midAngle);
+  const cos = Math.cos(-RADIAN * midAngle);
+  const sx = cx + (outerRadius + 10) * cos;
+  const sy = cy + (outerRadius + 10) * sin;
+  const mx = cx + (outerRadius + 30) * cos;
+  const my = cy + (outerRadius + 30) * sin;
+  const ex = mx + (cos >= 0 ? 1 : -1) * 22;
+  const ey = my;
+  const textAnchor = cos >= 0 ? 'start' : 'end';
+
+  return (
+    <g>
+      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>{payload.name}</text>
+      <Sector
+        cx={cx}
+        cy={cy}
+        innerRadius={innerRadius}
+        outerRadius={outerRadius}
+        startAngle={startAngle}
+        endAngle={endAngle}
+        fill={fill}
+      >
+
+      </Sector>
+      <Sector
+        cx={cx}
+        cy={cy}
+        startAngle={startAngle}
+        endAngle={endAngle}
+        innerRadius={outerRadius + 6}
+        outerRadius={outerRadius + 10}
+        fill={fill}
+      />
+      <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none"/>
+      <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none"/>
+      <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#333">{`Capacity`}</text>
+      <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} dy={18} textAnchor={textAnchor} fill="#999">
+        {`(Rate ${(percent * 100).toFixed(2)}%)`}
+      </text>
+    </g>
+  );
+};
+ 
+const TwoLevelPieChart = React.createClass({
+	getInitialState() {
+    return {
+      activeIndex: 0,
+    };
+  },
+
+  onPieEnter(data, index) {
+    this.setState({
+      activeIndex: index,
+    });
+  },
 	render () {
   	return (
       <ResponsiveContainer>
         <PieChart>
-          <Pie startAngle={180} endAngle={0} data={data} cy={250} outerRadius={180} fill="#8884d8" label>
-          {
-            data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
-          }
-          </Pie>
+          <Pie 
+            activeIndex={this.state.activeIndex}
+            activeShape={renderActiveShape} 
+            onMouseEnter={this.onPieEnter}
+            data={data} 
+
+            innerRadius={90}
+            outerRadius={120} 
+            cy={170} 
+            fill="#898989">
+            {
+              data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
+            }
+            </Pie>
         </PieChart>
        </ResponsiveContainer>
     );
   }
 })
 
-export default StraightAnglePieChart;
+export default TwoLevelPieChart;

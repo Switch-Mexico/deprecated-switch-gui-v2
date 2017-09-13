@@ -43,7 +43,7 @@ const ProjectInfo = props => {
           <Card style={{ marginBottom: `${10}px`, height: `${100}%`, width: `${100}%`, background:'##f8f9f9'   }}>
             <div className='card-details' >
               <div className='card-big-details'><span>{props.totalCapacity}</span></div>
-              <div className='card-small-details'>Total capacity limit</div>
+              <div className='card-small-details'>Total capacity limit [MW]</div>
             </div>
           </Card>
         </Row>
