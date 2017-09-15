@@ -30,10 +30,20 @@
   width: 70%;
 }
 
+.text-charts span{
+  font-weight: bold!important;
+}
+
 .bold-text-charts{
   font-weight: bold!important;
+  color: #2c3e50;
+}
+
+
+.sm-text-charts{
   color: #34495e;
 }
+
 
 .card-details{
   position: absolute;
@@ -72,4 +82,47 @@
 
 .h4{
   font-size: 10px;
+}
+
+.chart-legend{
+  vertical-align: middle;
+  margin: auto;
+}
+
+.chart-table{
+  vertical-align: middle;
+  text-align: left;
+  width: 60%;
+  margin: auto;
+  padding-right: 40px;
+  
+}
+
+.chart-wrapper{
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.Legend {
+  display : flex; 
+
+	&--color {
+		display: inline-block;
+		vertical-align: middle;
+		border-radius: 2px;
+		width: 16px;
+		height: 16px;
+	}
+	
+	&--label {
+		display: inline-block;
+		vertical-align: middle;
+		font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    color: #34495e;
+    margin-left: 2px;
+		margin-right: 20px;
+	}
 }

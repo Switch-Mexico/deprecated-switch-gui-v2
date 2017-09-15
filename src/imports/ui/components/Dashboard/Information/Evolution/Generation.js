@@ -47,7 +47,7 @@ var Legend = React.createClass({
   },
 });
 
-const Evolution = props =>
+const Generation = props =>
   <div
     style={{
       paddingBottom: `${10}px`,
@@ -69,13 +69,13 @@ const Evolution = props =>
           >
             <div className="text-charts">
               <div className="bold-text-charts">
-                <CardTitle>Total Available Capacity By Type of Technology</CardTitle>
+                <CardTitle>Total Generation by Type of Technology </CardTitle>
               </div>
               <div className="sm-text-charts">
                 <CardText>
-                  In 2030, the total capacity will be 109,367 MW, which is a 61% increase from the
-                  end of 2015. Half of the installed capacity will be made up of conventional
-                  technologies and the other half will be comprised of clean technologies.{' '}
+                  In 2030, the estimated electric generation will be 443,606 GWh, where 59% will be
+                  generation of conventional energies and the other 41% will be generation of clean
+                  energies.{' '}
                 </CardText>
               </div>
             </div>
@@ -119,6 +119,6 @@ const Evolution = props =>
     </Row>
   </div>;
 
-const EvolutionWithData = graphql(data)(Evolution);
+const GenerationWithData = graphql(data)(Generation);
 
-export default EvolutionWithData;
+export default GenerationWithData;

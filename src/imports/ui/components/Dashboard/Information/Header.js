@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import Dropdown from './Dropdown';
 
 export default class InformationHeader extends React.Component {
   constructor(props) {
@@ -23,9 +24,7 @@ export default class InformationHeader extends React.Component {
       <div className="pills-right">
         <Nav pills>
           <NavItem>
-            <NavLink replace to="/">
-              Evolution
-            </NavLink>
+            <Dropdown />
           </NavItem>
         </Nav>
       </div>
