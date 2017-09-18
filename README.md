@@ -7,11 +7,12 @@
 </h1>
 
 
-<p>
-  <a href=""><img src="./assets/images/berkeley.png"></a>
-  <a href=""><img src="./assets/images/hawaii.png"></a>
-  <a href=""><img src="./assets/images/unam.png"></a>
-</p>
+<div>
+  <a href=""><img width="120" src="./assets/images/berkeley.png"></a>
+  <a href=""><img width="100" margin-left="15" src="./assets/images/hawaii.png"></a>
+  <a href=""><img width="250" margin-left="15" src="./assets/images/rael.png"></a>
+  <a href=""><img width="100" src="./assets/images/unam.png"></a>
+</div>
 
 
 <p>
