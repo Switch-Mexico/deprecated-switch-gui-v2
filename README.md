@@ -7,13 +7,6 @@
 </h1>
 
 
-<div>
-  <a href=""><img width="120" src="./assets/images/berkeley.png"></a>
-  <a href=""><img width="100" margin-left="15" src="./assets/images/hawaii.png"></a>
-  <a href=""><img width="250" margin-left="15" src="./assets/images/rael.png"></a>
-  <a href=""><img width="100" src="./assets/images/unam.png"></a>
-</div>
-
 
 <p>
   <a href="https://travis-ci.org/LexieCore/test"><img src="https://travis-ci.com/LexieCore/test.svg?token=Hrz4Yuyp2x9BS2wSqwRH&branch=master" alt="Build Status"></a>
@@ -25,6 +18,19 @@
 <img src="./examples/gif.gif" alt="Preview" />
 <h3>Download</h3>
 <p>Builds are available for <strong>macOS</strong>, <strong>Debian</strong> and <strong>Windows</strong>. Visit <a href="https://github.com/Switch-Mexico/SWITCH/releases">SWITCH GitHub Releases</a></p>
+
+
+<h1>
+  <h4>A collaboration between:</h4>
+  <br>
+</h1>
+<div>
+  <a href=""><img width="160" src="./assets/images/berkeley.png"></a>
+  <a href=""><img width="130" src="./assets/images/hawaii.png"></a>
+  <a href=""><img width="270" src="./assets/images/rael.png"></a>
+  <a href=""><img width="150" src="./assets/images/unam.png"></a>
+</div>
+
 
 
 <h3>License</h3>
