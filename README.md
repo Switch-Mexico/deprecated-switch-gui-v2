@@ -6,6 +6,14 @@
   <br>
 </h1>
 
+
+<p>
+  <a href=""><img src="./assets/images/berkeley.png"></a>
+  <a href=""><img src="./assets/images/hawaii.png"></a>
+  <a href=""><img src="./assets/images/unam.png"></a>
+</p>
+
+
 <p>
   <a href="https://travis-ci.org/LexieCore/test"><img src="https://travis-ci.com/LexieCore/test.svg?token=Hrz4Yuyp2x9BS2wSqwRH&branch=master" alt="Build Status"></a>
   <a ><img src="https://img.shields.io/github/downloads/Switch-Mexico/SWITCH/total.svg" alt="Build status"></a>
