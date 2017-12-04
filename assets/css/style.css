@@ -805,16 +805,12 @@ input:-ms-input-placeholder {
 .whatido .head_title h2{}
 
 .head_title_rigth {
-	margin: 40px 0px;
 }
-.head_title_rigth p{
-	font-size:18px;
-	font-family: 'open_sanslight';
-	color:#000000;
+.head_title_rigth h1{
 }
 
 .single_whatido{
-	margin-top: 50px;
+	margin-top: 125px;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -846,11 +842,13 @@ input:-ms-input-placeholder {
 	margin-top:80px;
 }
 .single_work_colum{
-	padding:0;
-	border:1px solid #ddd;
+    margin-left: 250px;
+	padding:1000;
+	border:50px solid transparent;
 }
 .single_work img{
-	width:100%;
+	max-width:150%;
+    height:auto;
 }
 
 .btn_bg {
@@ -879,12 +877,15 @@ input:-ms-input-placeholder {
 }
 
 .single_about{
-	margin-top: 50px;
-    width: 70%;
-    margin-left:15%;
+    margin:auto;
+    margin-top: 50px;
 }
 .single_about_img{
+    margin-top:30px;
 	margin-bottom:30px;
+    margin:auto;
+    width:50%;
+    height:auto;
 }
 .single_about h3{
     font-size: 18px;
@@ -900,6 +901,7 @@ input:-ms-input-placeholder {
 }
 .single_about p{
 	font-size:18px;
+    margin:auto;
 }
 
 /* contact section */
@@ -994,6 +996,8 @@ input:-ms-input-placeholder {
 
 .single_copyirgth p{
 	margin-top:10px;
+    margin-left:30px;
+    margin-bottom:10px;
 }
 
 
