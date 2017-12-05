@@ -1,391 +1,926 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>SWITCH</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8"></meta>
 
-        <!--<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>-->
-        <link rel="stylesheet" href="assets/css/fonticons.css">
-        <link rel="stylesheet" href="assets/fonts/stylesheet.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    ></meta>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    ></meta>
+
+    <meta
+        name="description"
+        content="SWITCH-GUI landing page"
+    ></meta>
+
+    <title>SWITCH</title>
+
+    <!-- External Stylesheets css -->
+    <!-- Bootstrap -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/bootstrap.min.css"
+    ></link>
+
+    <!-- Simple Line icons -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/simple-line-icons.css"
+    ></link>
+
+    <!-- Animate -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/animate.css"
+    ></link>
+
+    <!-- Owl-carousel -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/owl.carousel.min.css"
+    ></link>
+
+    <!-- Magnific Popup -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/magnific-popup.css"
+    ></link>
+
+    <!-- Template Stylesheets css -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    ></link>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/responsive.css"
+    ></link>
+
+    <!-- Google Fonts -->
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+        rel="stylesheet"
+    ></link>
+
+    <!-- Favicon -->
+
+    <link
+        rel="shortcut icon"
+        href="assets/img/favicon.png"
+        type="image/x-icon"
+    ></link>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
 
-        <!--For Plugins external css-->
-        <link rel="stylesheet" href="assets/css/plugins.css" />
+    <script src="assets/js/modernizr.js"></script>
+    <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.min.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+</head>
 
-        <!--Theme custom css -->
-        <link rel="stylesheet" href="assets/css/style.css">
+<body
+    data-spy="scroll"
+    data-target=".navbar-default"
+    data-offset="100"
+>
+    <!-- Page Preloader -->
 
-        <!--Theme Responsive css-->
-        <link rel="stylesheet" href="assets/css/responsive.css" />
-
-        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
-        <!--Home page style-->
-        <header id="main_menu" class="header">
-            <div class="main_menu_bg navbar-fixed-top">
-                <div class="container-fix">
-                    <div class="row">
-                        <div class="nave_menu">
-                            <nav class="navbar navbar-default">
-                                <div class="container-fluid">
-                                    <!-- Brand and toggle get grouped for better mobile display -->
-                                    <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                            <span class="sr-only">Toggle navigation</span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>
-                                        
-                                    </div>
-
-                                    <!-- Collect the nav links, forms, and other content for toggling -->
-                                    <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                                        <ul class="nav navbar-nav">
-                                            <li><a href="#home">Home</a></li>
-                                            <li><a href="#model">The SWITCH Model</a></li>
-                                            <li><a href="#gui">GUI</a></li>
-                                            <li><a href="#team">Team</a></li>
-                                            <li><a href="https://github.com/Switch-Mexico/SWITCH">Download</a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>	
-                    </div>
-
-                </div>
-
+    <div id="loading-page">
+        <div id="loading-center-page">
+            <div id="loading-center-absolute">
+                <div class="loader"></div>
             </div>
-        </header> <!--End of header -->
+        </div>
+    </div>
 
+    <!-- header -->
 
+    <div
+        class="navbar navbar-default navbar-fixed-top affix-top"
+        role="navigation"
+        data-spy="affix"
+        data-offset-top="50"
+    >
+        <div class="container">
+            <!-- Mobile navigation & logo -->
 
-        <section id="home" class="home">
-            <div class="home_overlay">
+            <div class="navbar-header">
+                <button
+                    type="button"
+                    class="navbar-toggle dropdown-button waves-effect waves-teal btn-flat"
+                    data-toggle="collapse"
+                    data-target="#navbar-collapse"
+                >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a
+                    class="navbar-brand logo"
+                    href=""
+                >
+                    <img
+                        src="assets/img/logos/logo-w.png"
+                        class="logo-light"
+                        alt=""
+                        title=""
+                    >
+
+                    <img
+                        src="assets/img/logos/logo-b.png"
+                        class="logo-dark"
+                        alt=""
+                        title=""
+                    >
+                </a>
+            </div>
+
+            <!-- Links navigation menu -->
+
+            <div class="navbar-collapse collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right navigation-links">
+                    <li>
+                        <a data-scroll="" href="#home" class="section-scroll">Home</a>
+                    </li>
+
+                    <li>
+                        <a
+                            data-scroll=""
+                            href="#model"
+                            class="section-scroll"
+                        >The SWITCH Model</a>
+                    </li>
+
+                    <li>
+                        <a
+                            data-scroll=""
+                            href="#gui"
+                            class="section-scroll"
+                        >GUI</a>
+                    </li>
+
+                    <li class="active active-link">
+                        <a
+                            data-scroll=""
+                            href="#team"
+                            class="section-scroll"
+                        >Team</a>
+                    </li>
+
+                    <li>
+                        <a 
+                            data-scroll=""
+                            href="https://github.com/Switch-Mexico/SWITCH"
+                            class="section-scroll btn btn-lg btn-links  text-uppercase"
+                        >Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro -->
+
+    <section
+        id="home"
+        class="intro-section"
+    >
+        <div class="section-inner-intro xs-section-align sm-section-align">
+            <!-- container -->
+            <!-- Screenshots -->
+
+            <section
+                id="scennshots"
+                class="padd-section"
+            >
+                <!-- container -->
+
                 <div class="container">
                     <div class="row">
-						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-						  <!-- Indicators -->
-						  <ol class="carousel-indicators">
-							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						  </ol>
+                        <!-- Start title-section -->
 
-						  <!-- Wrapper for slides -->
+                        <div class="row-centered white-text">
+                            <div class="col-md-3 col-sm-3 col-xs-4  col-centered">
+                                <img
+                                    src="assets/img/logos/logo-w.png"
+                                    class="img-responsive"
+                                    title=""
+                                    alt=""
+                                >
+                            </div>
+                        </div>
 
-						</div>						
-                        <div class="container-title">
-                            <img src="assets/images/logo-w.png" alt="...">
-                            <h4>
-                                A linear programming platform used to examine <br/>
-                                least cost in the production of clean energy. <br/>     
-                                Designed to meet specific reliability, performance, and <br/>     
-                                enviromental quality standards for Mexico. <br/>
-                            </h4>
-                            
-                            
-                        </div>
-                        <div class="top-img">
-                            <img src="assets/images/triangle3.png" alt="...">
-                        </div>
-                        <div class="bottom-img-left">
-                            <img src="assets/images/polygons1.png" alt="...">
-                        </div>
-                         <div class="bottom-img-right">
-                            <img src="assets/images/triangle2.png" alt="...">
-                        </div>
-                        
-						<div class="logo">
-                            <div class="logo-container-secondary">
-                                <div class="logo-berkeley-rael">
-                                    <ul>
-                                        <li>
-                                        <a href="#home">
-                                            <img src="assets/images/hawaii.png" alt="...">
-                                        </a>
-                                        </li>
-                                        <li>
-                                            <a href="#home">
-                                                <img src="assets/images/berkeley.png" alt="...">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#home">
-                                                <img src="assets/images/rael.png" alt="...">
-                                            </a>
-                                        </li>
-                                    </ul>                                    
-                                </div>
-                            </div>                            
-						</div>
-						
-						
+                        <!-- End title-section -->
                     </div>
                 </div>
-            </div>
-        </section><!-- End of Banner Section -->
 
+                <div class="container">
+                    <div class="row">
+                        <!-- Start title-section -->
 
-        
+                        <div class="row-centered white-text">
+                            <div class="col-md-7 col-sm-7 col-xs-7 col-centered">
+                                <h1 class="section-title text-center white-text"></h1>
 
-        <section id="whatido" class="whatido">
-            <div class="container">
-                <div class="row">
-                    <div class="main_whatido_content text-center">
-                        
-                        <div class="col-md-12 col-sm-12 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-						  <div class="head_title text-center">
-                              <h2>MISSION STATEMENT</h2>
-							 <div class="separator"></div>
-						  </div>
+                                <p>
+                                    A linear programming platform used to examine least cost in the production of clean energy. Designed to meet specific reliability, performance, and enviromental quality standards for Mexico. 
+                                </p>
+                            </div>
                         </div>
-                        
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single_whatido wow fadeInLeft"  data-wow-duration="3s">
-								<div class="single_whatido_img">
-									<img src="assets/images/worldwide.svg" alt="" />
-								</div>
-								<h3>Clean Energy</h3>
-								<p>Optimizing electricity production and water desalinitation </p>
-							</div>
-						</div>
-						
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single_whatido wow fadeInLeft"  data-wow-duration="3s">
-								<div class="single_whatido_img">
-									<img src="assets/images/scoreboard.svg" alt="" />
-								</div>
-								<h3>Smart Investing</h3>
-								<p>Systematic approach to decarbonizing Mexico's power system </p>
-							</div>
-						</div>
-						
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single_whatido wow fadeInLeft"  data-wow-duration="3s">
-								<div class="single_whatido_img">
-									<img src="assets/images/renewable-energy.svg" alt="" />
-								</div>
-                                <div class="text-cotainer-section2">
-                                    <h3>Visualizing Energy Models</h3>
-								    <p>Researching evidence and modeling scenarios of low-carbon energy transition</p>
-                                </div>
-							</div>
-						</div>
+
+                        <!-- End title-section -->
                     </div>
                 </div>
-            </div>
-        </section><!-- End of Features Section -->
-        
-        <section id="model" class="whatido">
-            <div id="model" class="container">
-                <div class="row">
-                    <div class="main_whatido_content text-center">
-                        
-                        <div class="col-md-12 col-sm-12 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-						  <div class="head_title text-center">
-                              <h2>THE SWITCH MODEL</h2>
-							 <div class="separator"></div>
-						  </div>
-                        </div>
-                        
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single_whatido wow fadeInLeft"  data-wow-duration="3s">
-								<h3>SWITCH MATHEMATICAL DESCRIPTION</h3>
-								<p>Describes the input data, key assumptions, and linear program formulation of the SWITCH model </p>
-                                <a href="assets/pdfs/switch_mathematical_description.pdf">Timescales of Power System Balancing for Decarbonization of the Electricity Sector</a>
-							</div>
-						</div>
-						
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single_whatido wow fadeInLeft"  data-wow-duration="3s">
-								<h3>SWITCH WORKSHOP PPT</h3>
-                                <p>Walks through the framework of the model</p>
-                                <a href="assets/pdfs/switch_workshop.pdf">The Switch Model: Installation, Usage and Documentation</a>
-							</div>
-						</div>
-						
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single_whatido wow fadeInLeft"  data-wow-duration="3s">
-                                <h3>ENERGY POLICY, <br/>J NElSON et al </h3>
-								<p>Describes how decarbonizing electricity production is central to reducing greenhouse gas emissions</p>
-                                <a href="assets/pdfs/energy_policy.pdf">Energy Policy</a>
-							</div>
-						</div>
-                        
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single_whatido wow fadeInLeft"  data-wow-duration="3s">
-                                <h3>OTHER PUBLICATIONS</h3>
-								<p>Associated publications to the SWITCH model</p>
-                                <a href="https://rael.berkeley.edu/project/switch/">PROJECT/SWITCH — A capacity expansion model for the electricity sector</a>
-							</div>
-						</div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End of Features Section -->
-        
-        <section id="gui" class="myworks">
-            <div class="col-md-12 col-sm-12 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-				<div class="head_title text-center">
-				    <h2>SWITCH'S GUI</h2>
-				    <div class="separator"></div>
-				</div>
-            </div>
-            			
-			<div class="main_myworks_content text-center">
-				<div class="single_work_colum col-md-6 col-sm-12 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-					<div class="single_work">
-						<img src="assets/images/switch_gui1.png" alt="" />
-					</div>
-				</div>
-                
-                <div class="single_work_colum col-md-6 col-sm-12 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-					<div class="single_work">
-						<img src="assets/images/switch_gui2.png" alt="" />
-					</div>
-				</div>
-			</div>
-        </section><!-- End of Features Section -->
-		
-        <section id="team" class="about">
-            <div class="container">
-                <div class="row">
-					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeInLeft"  data-wow-duration="2s">
-						<div class="head_title text-center">
-							<h2>SWITCH - MEXICO TEAM</h2>
-							<div class="separator"></div>
-						</div>
-					</div>
-                    
-                    <div class="main_about_content text-center">
-                       <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft"  data-wow-duration="1.5s">
-							<div class="single_about">
-								<div class="single_about_img">
-									<img src="assets/images/team/user1.png" alt="" />
-								</div>
-								<h3>Sergio Rodriguez</h3>
-								<p>Head of Research</p>
-                                <a href="sergioc@berkeley.edu">sergioc@berkeley.edu</a>
-							</div>
-						</div>
-						
-                       <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft"  data-wow-duration="2s">
-							<div class="single_about">
-								<div class="single_about_img">
-									<img src="assets/images/team/user2.png" alt="" />
-								</div>
-								<h3>Alejandra Monroy</h3>
-								<p>Head of Software Development</p>
-                                <a href="ale.monroytech@gmail.com">ale.monroytech@gmail.com</a>
-							</div>
-						</div>
-						
-                       <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-							<div class="single_about">
-								<div class="single_about_img">
-									<img src="assets/images/team/user5.png" alt="" />
-								</div>
-								<h3>Muying Chen</h3>
-								<p>Research Assistant</p>
-                                <a href="muyingchen@berkeley.edu">muyingchen@berkeley.edu</a>
-							</div>
-						</div> 
-                         <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-							<div class="single_about">
-								<div class="single_about_img">
-									<img src="assets/images/team/user4.png" alt="" />
-								</div>
-								<h3>Dalton Do</h3>
-								<p>Research Assistant</p>
-                                <a href="daltondo@berkeley.edu">daltondo@berkeley.edu</a>
-							</div>
-						</div>
-                         <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-							<div class="single_about">
-								<div class="single_about_img">
-									<img src="assets/images/team/user6.png" alt="" />
-								</div>
-								<h3>Susheel Krishnamurthy</h3>
-								<p>Research Assistant</p>
-                                <a href="susheelk@berkeley.edu">susheelk@berkeley.edu</a>
-							</div>
-						</div>
-                        <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-							<div class="single_about">
-								<div class="single_about_img">
-									<img src="assets/images/team/user4.png" alt="" />
-								</div>
-								<h3>Hector Rincon</h3>
-								<p>Research Assistant</p>
-                                <a href="hecerinc@outlook.com">hecerinc@outlook.com</a>
-							</div>
-						</div> 
-                         <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-							<div class="single_about">
-								<div class="single_about_img">
-									<img src="assets/images/team/user6.png" alt="" />
-								</div>
-								<h3>Dennis Wu</h3>
-								<p>Research Assistant</p>
-                                <a href="pcdenniswu@berkeley.edu">pcdenniswu@berkeley.edu</a>
-							</div>
-						</div> 
-                    </div>
-                </div>
-            </div>
-        </section><!-- End of Features Section -->
+            </section>
 
-       
-
-	
-				<div class="row">
-					<div class="footer_copyright">
-						<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft"  data-wow-duration="3s">
-							<div class="single_copyirgth text-left">
-								<p>by ale.monroytech@gmail.com, daltondo@berkeley.edu</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-        
-
-
-        <!-- STRAT SCROLL TO TOP -->
-
-        <div class="scrollup">
-            <a href="#"><i class="fa fa-chevron-up"></i></a>
+            <!-- End Scrennshots -->
         </div>
 
-        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="assets/js/vendor/bootstrap.min.js"></script>
-        <script src="assets/js/vendor/isotope.min.js"></script>
+        <!-- container -->
+    </section>
 
-        <script src="assets/js/jquery.easypiechart.min.js"></script>
-        <script src="assets/js/jquery.mixitup.min.js"></script>
-        
-            
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
-        
-    </body>
+    <!-- End intro -->
+
+    
+    
+    
+    
+    
+      <!--Princing-->
+
+                <section id="pricing" class="padd-section ">
+
+
+                    <!--container-->
+
+                    <div class="container">
+                        <div class="row">
+                            <!-- Start title-section -->
+                            <div class="section-header">
+                                <div class="row-centered">
+                                    <div class="col-md-6 col-xs-12 col-sm-6 col-centered">
+
+                                        <h2 class="section-title text-center">Mission Statement</h2>
+                                        <p>Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli
+                                            incididunt ut labore Lorem ipsum madolor sit amet.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End title-section -->
+
+                                <div class="plan-price  text-center clearfix">
+
+
+                                    <div class="col-xs-12 col-sm-4 wow fadeInLeft">
+                                        <div class="plan-featured">
+                                            <div class="content-plan">
+                                                <div class="single_whatido_img">
+                                                    <img src="assets/img/sections/worldwide.svg" alt="" />
+                                                </div>
+                                                <h5 class="section-title text-center">Clean Energy</h5>
+                                                <ul>
+                                                    <li>Optimizing electricity production and water desalinitation </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 wow fadeInLeft">
+                                        <div class="plan-featured text-center">
+                                            <div class="content-plan">
+                                                <div class="single_whatido_img">
+                                                    <img src="assets/img/sections/scoreboard.svg" alt="" />
+                                                </div>
+                                                <h5 class="section-title text-center">Smart Investing</h5>
+                                                <ul>
+                                                    <li>Systematic approach to decarbonizing Mexico's power system </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 wow fadeInLeft">
+                                        <div class="plan-featured text-center">
+                                            <div class="content-plan">
+                                                <div class="single_whatido_img">
+                                                    <img src="assets/img/sections/renewable-energy.svg" alt="" />
+                                                </div>
+                                                <h5 class="section-title text-center">Visualizing Energy Models</h5>
+                                                <ul>
+                                                    <li>Researching evidence and modeling scenarios of low-carbon energy transition</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--container-->
+
+                        </div>
+
+                    </section>
+                    <!--End Pricing-->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <!--Model-->
+
+
+    <section id="model" class="padd-section ">
+
+        <!--container-->
+
+        <div class="container">
+            <div class="row">
+                <!-- Start title-section -->
+                <div class="section-header text-center">
+                    <div class="row-centered">
+                        <div class="col-md-6 col-xs-11 col-sm-8 col-centered">
+
+                            <h2 class="section-title text-center">The SWITCH Model</h2>
+                            <p>Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli
+                                incididunt ut labore Lorem ipsum madolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End title-section -->
+
+                    <!-- Start resource 1 -->
+                    <div class="row">
+                            <div class="hidden-lg hidden-md hidden-sm col-xs-2 wow fadeInUp">
+                                </div>
+                        
+                            <div class="col-md-6 col-sm-12 col-xs-9 wow fadeInUp">
+
+                                    <div class="features-block">
+
+                                        <h3>Workshop PPT</h3>
+                                        <p >Walks through the framework of the model</p>
+                                        <h5>Resource:</h5>
+                                        <a href="assets/pdfs/switch_workshop.pdf">The Switch Model: Installation, Usage and Documentation</a>
+
+                                        </div>
+
+
+                            </div>
+                        
+                        
+
+
+                                <!-- End resource 1 -->
+
+                                <!-- Start resource 2 -->
+
+                        
+                            <div class="hidden-lg hidden-md hidden-sm col-xs-2 wow fadeInUp">
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-8 wow fadeInUp">
+
+                                <div class="features-block">
+
+                                    <h3>Mathematical Description</h3>
+                                    <p> Describes the input data, key assumptions, 
+                                        and linear program formulation of the SWITCH model  </p>
+                                    <h5>Resource:</h5>
+                                    <a href="assets/pdfs/switch_mathematical_description.pdf">Timescales of Power System Balancing for Decarbonization of the Electricity Sector</a>
+                                    </div>
+
+
+                            </div>
+                              <!-- End resource 2 -->
+
+                        </div>
+                            <!-- Start resource 3 -->
+                        <div class="row">
+                                <div class="hidden-lg hidden-md hidden-sm col-xs-2 wow fadeInUp">
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-9 wow fadeInUp">
+
+                                        <div class="features-block">
+
+                                            <h3>Energy Policy, J Nelson et al </h3>
+                                            <p>Describes how decarbonizing electricity production is central to <br> reducing greenhouse gas emissions.</p>
+                                            <h5>Resource:</h5>
+                                            <a href="assets/pdfs/energy_policy.pdf">Energy Policy</a>
+
+                                            </div>
+
+
+                                </div>
+                                        <!-- End resource 3 -->
+                                        <!-- Start resource 4 -->
+                                <div class="hidden-md hidden-sm col-xs-2 wow fadeInUp">
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-8 wow fadeInUp">
+
+                                            <div class="features-block">
+
+                                                <h3>Other Publications </h3>
+                                                <p>Associated publications to the SWITCH model</p>
+                                                <h5>Resource:</h5>
+                                                <a href="https://rael.berkeley.edu/project/switch/">PROJECT/SWITCH — A capacity expansion model for the electricity sector</a>
+
+                                            </div>
+                                </div>
+                        </div>
+            <!-- End resource 4 -->
+            </div>
+
+        </div>
+    <!--container-->
+
+    </section>
+
+    <!--End Resources-->
+
+    <!-- Screenshots -->
+
+    <section
+        id="gui"
+        class="padd-section bg-color-blue"
+    >
+        <!-- container -->
+
+        <div class="container">
+            <div class="row">
+                <!-- Start title-section -->
+
+                <div class="row-centered white-text">
+                    <div class="col-md-6 col-sm-12 col-centered">
+                        <h2 class="section-title text-center white-text">SWITCH'S GUI</h2>
+
+                        <p>
+                            loremso impson dolo atem
+
+                            <b>
+                                <a
+                                    class="green-text"
+                                    href="https://github.com/Switch-Mexico/SWITCH"
+                                >
+                                    SWITCH-MEXICO GitHub Repository
+                                </a>
+                            </b>
+
+                            loremso impson dolo atem
+
+                            <b>
+                                loremso impson dolo atem
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- End title-section -->
+
+                <div class="screenshot_slider margin-40 padd-50">
+                    <div
+                        class="item"
+                        style="width:600px"
+                    >
+                        <a
+                            href="assets/img/slider/switch_gui1.png"
+                            class="popup-image"
+                        >
+                            <img
+                                src="assets/img/slider/switch_gui1.png"
+                                alt=""
+                                title=""
+                            >
+                        </a>
+                    </div>
+
+                    <div
+                        class="item"
+                        style="width:600px"
+                    >
+                        <a
+                            href="assets/img/slider/switch_gui2.png"
+                            class="popup-image"
+                        >
+                            <img
+                                src="assets/img//slider/switch_gui2.png"
+                                alt=""
+                                title=""
+                            >
+                        </a>
+                    </div>
+
+                    <div
+                        class="item"
+                        style="width:600px"
+                    >
+                        <a
+                            href="assets/img/slider/switch_gui1.png"
+                            class="popup-image"
+                        >
+                            <img
+                                src="assets/img//slider/switch_gui1.png"
+                                alt=""
+                                title=""
+                            >
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Scrennshots -->
+    <!--Team member --> 
+
+	<section id="team" class="padd-section bg-color-section">
+			
+			
+										<!--container-->
+			
+										<div class="container">
+											<div class="row">
+												<div class="section-header">
+													<div class="row-centered">
+														<div class="col-md-6 col-xs-12 col-sm-12 col-centered">
+			
+															<h2 class="section-title text-center">Core Team</h2>
+															<p>SWITCH researchers at  <a class="green-text"href="https://rael.berkeley.edu/" >Renewable & Appropriate Energy Laboratory</a>,  UC Berkeley
+																</p>
+															</div>
+														</div>
+													</div>
+												<div class="col-md-3 hidden-sm hidden-xs "> 
+													</div>
+													
+										</div>
+											<div class="row-centered">
+													<div class="col-md-3 core-team hidden-sm  hidden-xs"> 
+													</div>
+														<div class="col-md-3 col-sm-4 col-xs-4"> 
+															<div class="team-member member-image-hover"> 
+															 <img src="assets/img/contributors/user1.png">
+																	 <div class="member-caption">
+																		 <div class="member-content text-center">
+																			<div class="member-content-inner">
+																			  <h5 class="member-title">Sergio Rodriguez</h5>
+																			  <p class="member-subtitle">Head of Research</p>
+																			  <ul class="member-icons">
+																				
+																				<li class="social-icon"><a href="https://github.com/sergiocastellanos"><i class="icon-social-github"></i></a></li>
+																				<li class="social-icon"><a href="mailto:sergio.pvlab@gmail.com"><i class="icon-envelope"></i></a></li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-3 col-sm-4 col-xs-4"> 
+															 <div class="team-member member-image-hover"> 
+															 <img src="assets/img/contributors/user1.png">
+																 <div class="member-caption">
+																	 <div class="member-content text-center">
+																		<div class="member-content-inner">
+																		  <h5 class="member-title">Josiah Johnston</h5>
+																		  <p class="member-subtitle">NaN</p>
+																		  <ul class="member-icons">
+																			<li class="social-icon"><a href="https://erg.berkeley.edu/people/johnston-josiah/"><i class="icon-user"></i></a></li>				
+																			<li class="social-icon"><a href="mailto:josiah.johnston@gmail.com"><i class="icon-envelope"></i></a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													 </div>
+													 <div class="col-md-3 col-sm-4 col-xs-4"> 
+															<div class="team-member member-image-hover"> 
+															<img src="assets/img/contributors/user1.png">
+																	<div class="member-caption">
+				   
+																		<div class="member-content text-center">
+																		   <div class="member-content-inner">
+																			 <h5 class="member-title">Daniel Kammen</h5>
+																			 <p class="member-subtitle">NaN</p>
+																			 <ul class="member-icons">
+																			   <li class="social-icon"><a href="http://kammen.berkeley.edu/"><i class="icon-user"></i></a></li>
+																			   <li class="social-icon"><a href="https://twitter.com/dan_kammen"><i class="icon-social-twitter"></i></a></li>
+																			   
+																				 
+																		   </ul>
+																	   </div>
+																   </div>
+															   </div>
+														   </div>
+													  </div>
+												</div>
+												 
+										
+										<div class="row-centered">
+												<div class="col-md-6 col-xs-12 col-sm-12 col-centered">
+	
+													<h1 class="section-title text-center margin-title">SWITCH-MEXICO</h1>
+													<p>Collaborators</p>
+													</div>
+												</div>
+											 <div class="row">
+												 <div class="col-md-2 hidden-sm  hidden-xs"> 
+													</div>			
+													
+												 <div class="col-md-2 col-sm-3 col-xs-4"> 
+													 <div class="team-member member-image-hover"> 
+													 <img src="assets/img/contributors/alexter.jpg">
+															 <div class="member-caption">
+			
+																 <div class="member-content text-center">
+																	<div class="member-content-inner">
+																	  <h5 class="member-title">Alejandra Monroy</h5>
+																	  <p class="member-subtitle">Head of Software Development</p>
+																	  <ul class="member-icons">
+																		<li class="social-icon"><a href="https://twitter.com/alexter42"><i class="icon-social-twitter"></i></a></li>
+                                                                          <li class="social-icon"><a href="https://github.com/alexter42"><i class="icon-social-github"></i></a></li>
+																	<li class="social-icon"><a href="mailto:a.monroy@berkeley.edu"><i class="icon-envelope"></i></a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+											   </div>
+											   <div class="col-md-2 col-sm-3 col-xs-4"> 
+													<div class="team-member member-image-hover"> 
+													<img src="assets/img/contributors/user5.png">
+															<div class="member-caption">
+		   
+																<div class="member-content text-center">
+																   <div class="member-content-inner">
+																	 <h5 class="member-title">Muying Chen</h5>
+																	 <p class="member-subtitle">Research Assistant</p>
+																	 <ul class="member-icons">
+																	   <li class="social-icon"><a href="mailto:muyingchen@berkeley.edu"><i class="icon-envelope"></i></a></li>
+																   </ul>
+															   </div>
+														   </div>
+													   </div>
+												   </div>
+											  </div>
+											   <div class="col-md-2 col-sm-3 col-xs-4"> 
+													<div class="team-member member-image-hover"> 
+														 <img src="assets/img/contributors/user4.png">
+															 <div class="member-caption">
+																 <div class="member-content text-center">
+																	<div class="member-content-inner">
+																	  <h5 class="member-title">Dalton Do</h5>
+																	  <p class="member-subtitle">Research Assistant</p>
+																	  <ul class="member-icons">
+																		<li class="social-icon"><a href="mailto:daltondo@berkeley.edu"><i class="icon-envelope"></i></a></li>
+																		<li class="social-icon"><a href="https://github.com/daltondo"><i class="icon-social-github"></i></a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												 
+												 
+												 <div class="col-md-2 col-sm-3 hidden-xs"> 
+													 <div class="team-member member-image-hover"> 
+													 <img src="assets/img/contributors/user6.png">
+														 <div class="member-caption">
+															 <div class="member-content text-center">
+																<div class="member-content-inner">
+																  <h5 class="member-title">Susheel Krishnamurthy</h5>
+																  <p class="member-subtitle">Research Assistant</p>
+																  <ul class="member-icons">
+																	<li class="social-icon"><a href="mailto:susheelk@berkeley.edu"><i class="icon-envelope"></i></a></li>
+																  </ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												 </div>
+										</div>
+										<div class="row">
+                                            <div class="hidden-lg hidden-md hidden-sm col-xs-4"> 
+													 <div class="team-member member-image-hover"> 
+													 <img src="assets/img/contributors/user6.png">
+														 <div class="member-caption">
+															 <div class="member-content text-center">
+																<div class="member-content-inner">
+																  <h5 class="member-title">Susheel Krishnamurthy</h5>
+																  <p class="member-subtitle">Research Assistant</p>
+																  <ul class="member-icons">
+																	<li class="social-icon"><a href="mailto:susheelk@berkeley.edu"><i class="icon-envelope"></i></a></li>
+																  </ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												 </div>
+												<div class="col-md-4 col-sm-3 hidden-xs"> 
+													</div>
+												<div class="col-md-2 col-sm-3 col-xs-4"> 
+													 <div class="team-member member-image-hover"> 
+													 <img src="assets/img/contributors/user4.png">
+													<div class="member-caption">
+														<div class="member-content text-center">
+																<div class="member-content-inner">
+																	<h5 class="member-title">Hector Rincon</h5>
+																	<p class="member-subtitle">Research Assistant</p>
+																	<ul class="member-icons">
+																		<li class="social-icon"><a href="mailto:hecerinc@outlook.com"><i class="icon-envelope"></i></a></li>
+																	</ul>
+																</div>
+														</div>
+													</div>
+													</div>
+											    </div>
+											    <div class="col-md-2 col-sm-3 col-xs-4"> 
+													<div class="team-member member-image-hover"> 
+													    <img src="assets/img/contributors/user6.png">
+															<div class="member-caption">
+																<div class="member-content text-center">
+																	<div class="member-content-inner">
+																	  <h5 class="member-title">Dennis Wu</h5>
+																	  <p class="member-subtitle">Research Assistant</p>
+																	  <ul class="member-icons">
+																		<li class="social-icon"><a href="mailto:pcdenniswu@berkeley.edu"><i class="icon-envelope"></i></a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+											   </div>
+				
+										</div>
+									</div>
+								</section>
+			
+								<!--Team member --> 
+
+    <!-- Downlaod -->
+
+    <section
+        id="download"
+        class="padd-section padd-bottom"
+    >
+        <!-- container -->
+
+        <div class="container">
+            <!-- Start title-section -->
+
+            <div class="row-centered">
+                <div class="col-md-6 col-xs-12 col-sm-6 col-centered">
+                    <div class="download-content">
+                        <h2></h2>
+
+                        <h3>Source Code</h3>
+
+                        <p>
+                           We  believe in open source, let us collaborate.
+                        </p>
+
+                        <div class="btn-download-content">
+                            <a
+                                href="https://github.com/Switch-Mexico/SWITCH"
+                                class="btn-downlaod"
+                            >
+                                <img
+                                    src="assets/img/icon/github-logo-white.png"
+                                    alt=""
+                                    title=""
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-centered">
+                <div class="col-md-6 col-xs-12 col-sm-6 col-centered logos-box">
+                    <h3>A Collaboration between:</h3>
+                </div>
+
+                <div class="col-md-12 col-xs-8 col-sm-12 col-centered logos-box">
+                    
+                    <div class="col-md-6 col-sm-6 col-centered  col-xs-12">
+                            <div class="collaborations-logo">
+                               <img src="assets/img/logos/institutions/rael.png">
+                            </div>
+                        </div>
+                    
+                    <div class="row-centered">
+                        <div class="col-md-3 col-sm-4 col-centered  logos-box col-xs-12">
+                            <div class="collaborations-logo">
+                                <img src="assets/img/logos/institutions/berkeley.png">
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-4 col-centered  col-xs-12">
+                            <div class="collaborations-logo">
+                                <img src="assets/img/logos/institutions/hawaii.png">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-centered  col-xs-12">
+                            <div class="collaborations-logo">
+                               <img src="assets/img/logos/institutions/unam.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downlaod -->
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-top">
+                    <!-- Start title-section -->
+
+                    <div class="row-centered">
+                        <div class="col-md-6 col-xs-12 col-sm-6 col-centered">
+                            <ul class="list-social list-inline">
+                                <li>
+                                    <a
+                                        href="https://twitter.com/"
+                                        target="_blank"
+                                        class="btn btn-circle  btn-slack"
+                                    >
+                                        <i class="icon-social-slack"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <!-- COPYRIGHT TEXT -->
+
+                    <div class="copyright">
+                        <p>
+                            2017 © Copyright SWITCH.  All rights Reserved.
+                        </p>
+                    </div>
+
+                    <!-- COPYRIGHT TEXT -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap Plugins -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Template Plugins -->
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.scrollUp.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <!-- Main js -->
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
